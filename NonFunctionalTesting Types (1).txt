@@ -1,0 +1,307 @@
+Non-Functional Testing:-->
+
+	=> Non functional testing types verify how system
+		performs.Inorder to run functional behavior ofsoftware
+
+	=> Tester involve in non-functional testing using NFRS document
+		[Non functional required specification document].
+
+	=> After completed functional testing  testers involve in 
+		non functional testing
+
+	=> Organization recriut separate non functional testing team or 
+	   provide traing for functional engineers inorder to condcut 
+	   non functional testings
+
+1.Usability Testing:-->
+	During this test tester verify userfriendlyness of software
+
+	Note:--> Tester verify software userfriendlyness using 
+		below checklist
+
+	1.Verify spelling in all screens of software
+	2.Verify labels in it all screens of software
+	3.Verify Meaning of labels in all screens of software
+	4.Verify line spacing in label and control
+	5.Verify line spacing in controls
+	6.Verify location of controls which are functionality related
+	7.Verify Home button in every screen of software
+	8.Verify shortcuts in labels of screens
+	9.Verify icon symbol meaning
+	10.Verify icon tool tips
+	11.Verify keyboard access on every screens
+	12.Verify meaning of error
+	13.Verify system menu existence in screens.(Minimize, Maximize, Restore, click….etc
+	14.Verify color contrast of screens
+
+===================================================================
+2. Compatibily Testing:-->
+	During this test tester verify browser and operating system 
+	comptibility.Here test engineer verify whether software 
+	is accessable and operatable with in client expected 
+	browsers and operating systems.
+
+	=> Other name of compatibility testing is cross browser testing 
+		or cross platform testing [In real time organizations 
+		use selenium kind of automation tools to conduct 
+		cross -browser automation]	
+======================================================================
+3.Performance testing
+	=> Performance is non functional testing 
+	=> Performance testing only possible using automation tool like 
+		[LoadRunner, Jmeter,Web load, Load ninza --etc]
+	=> During this test performance testing engineers verify 
+	   software speed  and response under customer expected configuration
+	=> Performance testing can't conduct at over UI 
+		[From the front pages]
+
+	Performance testing can be conducted using below sub tests..
+			1. Load Testing
+			2. Stress Testing
+			3. Spike Testing
+			4. Endurance Testing
+
+Loadtesting: 
+	the execution of software under customer configaration and cutomer
+	expected load(No of concurrent users) to estimate speed 
+	in processing, is called load testing
+
+Stress testing:
+	the execution of software under cutomer configaration and more than
+	customer expected load to estimate "peak load" is called stress testing
+
+spike testing:
+	Spike Testing is a type of software performance testing that 
+	is done by suddenly increasing or decreasing the load on 
+	the system or software application. The load is generated 
+	by huge number of users and the behavior of the system 
+	is observed.
+
+Endurance testing:
+	execution of software under cutomer configaration and more than
+	customer expected load continously to estimate logvity and durability 
+	is called endurance testing
+============================================================================================
+Scalability Testing:-->
+
+	scalability test measures the system at the minimum and maximum 
+	loads at all levels, including the software, hardware and database levels
+
+	Load testing determines the point at which level the application 
+	crashes, while scalability tries to identify the reason 
+	for application crash and take steps to resolve the issue.
+
+	In short, Load Testing helps to identify the performance 
+	problems while scalability testing helps to identify if 
+	the system can scale up to the growing number of users.
+
+============================================================================================
+Datavolume testing:
+	During this test, testing team is operating software by 
+	storing sample data to estimate capacity of the software 
+	database.
+
+	Database capacities are changing due to this
+	reason testing team conduct data volume testing to 
+	find the capacity of database in number of records.
+============================================================================================
+Intersystem testing:-->
+	During this test, testing team verify our software is 
+	sharing data and co-existing with other softwares.
+	
+	For Example:-->
+		Flipkart,Amazon web applications allow payment option with differnet
+		gateways like  [UPI,Netbanking,Creditcard/Debitcard  ---etc]
+
+
+============================================================================================
+Installation Testing:-->
+	=> Installation testing conduct most commonly on Desktop softwares
+	=> To conduct installation testing tester follow below steps 
+
+	1.Verify set up program execute to start installation
+	2.Verify friendliness of screens while installation
+	3.Verify occupied space after installation
+	4.verify Un install process
+	5.Verify user can cancel installation any time..
+	6.Verify installation asking accept license agreement.
+	7.Verify re installation of software
+	8.Verify installation will continue after Restart Computer
+	9.Verify installation in different compatible operating systems
+	10.Verify Next button is disabled until user select accept license agreement
+	11.Verify installation accept minimize and maximize feature
+	12.Verify time taking for installation
+	13.Verify process bar showing accurate result during installation
+	14.Verify installation completed message displayed 
+	15.Verify Error dialog displayed incase of failure during installation
+	16.Verify installation happend at required folder
+	17.Verify application shorcut created at desktop
+	18.Verify supporting parallel installation
+	
+=======================================================================
+Recovery Testing:-->
+	Recovery testing is performed in order to determine how quickly 
+	the system can recover after the system crash or hardware 
+	failure. It comes under the type of nonfunctional testing.
+	Recovery testing done by the system networking  and hardware team.
+
+==========================================================================
+. Globalization Testing.
+	Globalization is a process of designing a software 
+	application so that it can be adapted to various languages 
+	and regions without any changes.
+
+	Internationalization (l18N):--> refer globalization
+
+	Example:-->
+		Amazon website allowed to access same interfaces 
+		in India,UK,USA ----etc regions.
+
+===========================================================================
+Localization Testing (L10N Testing):
+	Localization is a process of adapting globalization software 
+	for a specific region or language by adding local specific components.
+
+	1. Verify software available in local language.
+	2. Verify local timezones are displaying.
+	3. Verify Local maps displaying at software.
+	4. Verify postalcodes are displayed according to local region.
+	5. Verify Mobile Number with different country codes
+
+Multy languity testing:
+	some times developers are developing a s\w in java unicode or .net with
+	unicode this type  of sofware provide output in differnt lanaguge and by
+	taking input in one language.
+==============================================================================
+SecurityTesting:-->
+
+	Finding vulnarable spots with in software. 
+	It mean finding weak spots of software.
+
+	In one word security testing means authorized user can get access 
+	software, for unauthrized user prevent software access.
+
+
+	1. Authorization
+	2. Authentication
+	3. Dataprotection
+	4. SQL injection [Cross site scripting]
+	5. Session Management
+	6. ErrorHandling
+	7. Access points
+	8. Cookies 
+
+	
+Authorization:-->
+	According to roles and responsibilites user able to access software.
+	Also prevent invalid user to access software features.
+
+	During this test testing team login into software with different
+ 	roles and check authorities available according to there 
+	roles and responsibilities..
+
+		=> What role is yours ?
+
+
+	Example:-->
+	In online video conference meeting only organizer have
+	permission to record meeting. This access should be restricted 
+	to attendies..
+
+Authentication:-->
+		=> Who you are?
+		=> authorized access  is granted to protect data and 
+		unauthorized access is restricted
+
+		Example:-->
+		Login authentication:-->
+		 Only valid user can access software and features of it.
+		for invalid user system restrict access ask to register 
+		with software.
+
+dataprotection:-->
+	=> Also we can call as encryption and decryption testing
+	=> Dataprotection testing can be done over userinterface and database.
+	=> In userinterface testing team verify all account passwords are 
+			restricting user to watch/copy.
+	=> Virtual keyboards [During Banking Logins]
+
+	How data protection tested in database:-->
+	=> Testers send queries to read password of user and verify 
+		data is saved in encrypted format.
+
+SqlInjection:-->
+	=> Also known as Cross site testing
+	=> Testers verify site is accessing any malicious script inorder to  manipulate
+	   software original behaviour..
+	=> Mostly test conduct at input fields like [Editbox, Listbox ---etc]
+
+	Example:-->
+	=> Bank employees restricted to transfter ammount upto 20000.Then employee
+	is trying to increase range by sending malicious script from user interface.
+
+Security Testcases:-->
+
+=> 1. Verify invalid credentials that cannot be entered less than 6
+	characters and password should not be the same.
+
+=> 2. Verify system should restrict accessing previous pages after 
+	Sign out.
+		
+=> 3. Verify bookmarked pages asking to re enter authentication
+
+=> 4. Verify bookmark option disabled on secured pages
+
+=> 5. Verify system restricted user to view source
+
+=> 6. Verify Right click option is disabled
+
+=> 7. Verify your server lock out when individual who has tried to 
+      Access a site multiple times with invalid user account.
+
+=> 8. Verify system ask user to login again after timeout finished
+
+=> 9. Verify preventing software access. when user try direct url entry 
+      to access  secured pages.
+
+=> 10. Verify the same account login at diff machines. [At a time only 
+     one user login into system]
+
+=> 11. Verify that error message doesn't contain malicious info so that 
+	hacker can’t hack website.
+
+=> 12. Verify input fields restrict html and xml tags injection.
+
+=> 13. Verify data projected in database should display user passwords in 
+	encrypted  format.
+
+=> 14. Verify system restricted guessing passwords using hacking software
+	 [brute force attack] [test with simple login with admin password]
+
+=> 15. Verify software is  restricted to access from different portals when
+        	 User have permission to access using single gateway.
+
+=> 16. Verify cookies storing restricted on secured page
+
+
+=============================================================================================================
+
+
+Write a testcase for online exam:-->
+	[Once Exam started you can't your browser]
+
+
+
+
+
+
+
+
+
+		
+
+
+		
+
+
+	
