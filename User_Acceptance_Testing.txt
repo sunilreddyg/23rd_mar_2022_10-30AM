@@ -1,0 +1,95 @@
+user accetance test[UAT]:-->
+
+		1. Alpha testing
+		2. Beta testing
+
+	
+	Why UAT:-->
+		Here accetance means approval of agreement.
+		Client conduct this testing before software goto live.
+
+	When UAT testing conduct:-->
+			After system testing and before software go to 
+			production.
+
+
+	Alpha testing:-->
+		It is a factory level testing. during this test organization form a team
+		along with [Developers, Business analyst team, test engineers] and this
+		team try to findout  QA team mistakes [Defect leakage].
+
+		What consider in alpha testing?
+				
+			1. Is QA testing team coverd all test areas.
+			2. Is QA team followed all bylaws to test software as 
+				specified in document.
+
+		How UAT testing conduct:-->
+
+			Here entire team members execute acceptance testcase.
+			These testcase developed by business analyst team or production team.
+
+			
+		second process:-->
+
+			It is  a factory level testing. During this test organization invite client
+			team to visit organization and ask to perform Quality Control test before
+			software install into client place.
+
+			Stage1:--> Once every developed requirement meet with customer expecation
+				client team request to install software at production environment.
+
+			stage2:-->Incase client team findout any leakages organization requrest
+				 some more time for software release.
+
+
+
+		Note:--> It is final testing  that is carried out before the software goes to live,
+			 Obviously this is last chance entire system to test once before software 
+			 release to production.
+
+
+		DEVELOPMENT ---> QA  ----> UAT  ---> PRODCUTION
+
+
+
+	Beta testing:-->
+
+		Users or clients involve in beta testing. During this test client recruite industry
+		experts to test software.
+
+		=> This testing conduct by two diffent category people like 
+				"Model users","Real users"
+
+		Model Users:-->
+			Model user includes [Marketing team, 
+			Industry experts, buyers ----etc]
+					
+		what is QA team job here:-->
+			We should train beta testing team.
+			Production team also train beta testing users.
+
+		End uses:-->
+			Group of end users[people]
+			Some times client release software to real 
+			public as free Source.With intension to 
+			findout defects with in software...
+============================================================================================================================
+				
+STLC:--> Software testing life cycle
+		
+
+	Qa Signin
+		Test initiation   	[Test Manager]		
+		Test plan		[Test Lead]
+		Test design		[Test Engineers]
+		Test Execution		[Test Engineers]
+		Defect Tracking		[Test Engineers]
+		Defect Reporting	[Test Engineers]
+	QA-Signoff
+=============================================================================================================================	
+
+
+
+
+				
