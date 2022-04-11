@@ -1,0 +1,73 @@
+Functional Requirement:-->
+
+	UserStory:-->
+		User search flights in public internet before booking.
+
+	Precondition:->
+		Proper internet ,Domain knowledge on booking
+
+	postCondition:-->
+		From search results page user can book flights
+
+	Trigger:--> 
+		Enter site url user land on search flights page
+
+	Actors:-->  
+		End user
+	BusinessRules:-->
+		=> User can search flight between oneway and roundtrip
+		=> By default Selection Comes for Oneway Trip
+		=> Arrival date should react according to oneway and roundtrip selection
+		=> user must choose arrival city from suggesstion list ,Instead of typing complete cityname
+		=> user must choose departure city from suggesstion list instead of typing complete cityname
+		=> Arrival and deapartue input fields allow to search flights using airport name
+		=> user can switch airports by hitting switch icon so that user can book a return flight
+		=> user can't search flight between same cities
+		=> departure date should display default date as current System date
+		=> User only allow to select date instead of typing
+		=> Selected date should populate at departure editbox
+		=> Previous date should be faded and doen't allow user to select
+		=> only booking allowed 6 months, after 6 months dates should be disabled/faded
+		=> user can't book return date on same day for international trips
+		=> For domestic flights can book on same day
+		=> Arrival date calendar show dates according to Departure date selection
+		=> User can select fly type Economy/Business
+		=> Maximum 9 passengers allowed for trip
+		=> Maximum 9 adults user can choose
+		=> Children  can't travel without adults
+		=> Each adult can carry one infant
+		=> Childrens can't carry infants
+		=> Children and Infant Dropdown list display according to adults list 
+		=> search result should between cites according Departure city and arrival city 
+==========================================================================================	
+	Special requirements:-->
+			oneway  --> Radio button
+			Roundtrip --> Radio button
+			Departure City  --> AutoComplete Editbox
+			Arrival City    -->  AutoComplete Editbox
+			Switch-Airports --> Icon   <=>
+			DepartureDate   --> Editbox & Calendar
+			ArrivalDate         --> Editbox & Calendar
+			Economy	           --> Radio button
+			Business	            --> Radio button
+			Adults	            --> Dropdown
+			Childrens             --> Dropdown
+			Infants	            --> Dropdown
+			Search Flights       --> Button
+------------------------------------------------------------------------------------------------------------------------------------
+	Status Messages:-->
+			From available  DeparturCityname   to ArrivalCityName
+			No flights available between these cities
+	Error Messages:-->
+			You can't leave the field [for every mandatory fields]
+			City or Airport name must select from suggesstions list only
+			You can't Travel same day for international trips
+===========================================================================
+		
+
+			
+			
+
+
+		
+	
