@@ -1,0 +1,277 @@
+
+Entry Criteria for Test Execution:-->
+	1. Unit and integration testing will be completed
+	2. All testcase should be designed and approved
+	3. Software installed into stagging servers[Local servers]
+	4. Test environment should be established
+
+
+	TestBed:--> Combination of test environment 
+			and testcase is called TestBED
+
+
+How they deploy software into test environment:-->
+
+	=> After completed testcase reviews TestLead request for 
+		software installation at testing environment.
+	=> That means Software installation into local servers 
+		[Stagging Server]
+	=> Operational team deploy software into local servers 
+		and request network and hardware  team to install 
+		all dependent softwares into testing environment..
+	=> Network team receive deployement document  [DD]
+
+What Deployment Document Contains:-->
+
+	=> What are the hardware and softwares to install in testing environment
+	for Example:-->  
+			1. Operating system  [WIN10]
+			2. Browser	     [IE11]
+			3. RAM 		     [8 GB]
+			4. Database          [SQL]
+
+	Note:--> After installation testing team need to check 
+		all required softwares installed in testing envionment.
+		If any softwares not installed testing team can 
+		request to install before execution..
+
+	=> Testing team receive "Release note" from 
+		developement team
+
+	=> What [Release note] or [Build note] contains:-->
+
+		1. Document Version and approvals
+		Release#1      [Build version and Names]
+		Approved by ---[Name of the project manager]
+
+		2. Hardwares and Softwares to install at 
+		   Testing environment
+						
+			1. Operating system  [WIN10]
+			2. Browser	     [IE11]
+	Note:--> Here testing team need to verify all neccessary
+		hardwares and software installed before execution.
+
+		3. Site url or Local IP address
+		http://192.168.1.23/OSM/Admin.v1.0
+			
+		4. Authentication details 
+			
+		Site usernames and Password
+=================================================================================================>>
+TestExecution:-->
+
+	After completed software deployment process into testing environment. Testing team
+	Testing team follow below levels of execution.
+
+	Level-0 :--> Smoke Testing
+	Level-1 :--> Comprehesive testing 
+	Level-2 :--> Sanity Testing
+	Level-3 :--> ReTesting
+	Level-4 :--> Regression Testing
+	Level-5 :--> Final regression testing
+
+	Note:--> Above levels also known as functional testings
+
+
+SmokeTesting:-->
+
+	Smoke testing is a level-0 testing. Testing team conduct 
+	smoke testing on every initial software. The main agenda 
+	of smoke testing is to find stability of software.
+
+	=> During smoke testing  testing team verify all important
+	  functionalites working and are they any "showstopper"
+	  defects available in software build.
+
+	=> Incase testing team findout any showStopper defects
+	   [High seviority  defects]immedietly testing team can  
+	   suspend build and request new build to install in a 
+           testing environment..
+
+	=> Other name of smoke testing is "build verification testing"
+
+
+When to Suspend build:-->
+	=> Too many defects comming from inital builds.
+	=> when user logout from the system    [Show stopper defect]
+	=> when key functionality is not working
+	=> Application crash 
+
+Note:--> Because real testing conduct only on stable sofware.
+
+	Q:->How long smoke testing will be conducted?
+	Ans:--> Until application is stable
+
+
+	Q:--> What is difference between build verification 
+		and build Accetance
+		
+	build verification:--
+		Testing condcut by testing team before accept
+		software from developement
+
+	build Acceptance testing:-->
+		Testing condcut by the client team before accept
+		software to install at client place.
+	
+
+Comprehensive Testing:-->
+
+	=> comprehensive is level-1 testing ,Also knows as 
+		System testing / Real testing
+
+	=> During this test testing team execute every testcase 
+		on Real Software.
+
+	=> In this level testing team report defects to developement 
+		team incase any mismatch find out in software 
+		while execution fo testcase.
+
+
+Execution steps:-->
+
+	Precondition to follow by test engineer before execution fo testcase:-->
+
+	Open all necessary documents before start your execution
+	[Testcase, TestData, Release Note, TestPlan,FRS,BRS ---Any project document]
+
+
+	1. Pick a Testcase  
+	2. Read and Understand testcase
+	3. Operate software and perform test steps according to testcase
+	4. check actual result at real software, Then write acutal result at testcase document
+	5. If actual result match with expected result It mean test pass, 
+		when testpass we should write Testpass status with in 
+		testcase document and continue testexecution for next testcase.
+
+	6. If actual result mismatch with expected result we should change 
+	   testcase status from NO-RUN to Testfail and report defect 
+	   to developement team. 
+
+	   Defect reporting tools --->[JIRA,QUALITYCENTER,Bugzilla,Yodiz---etc]
+
+	7. Find dependent testcases for failure testcase, 
+	   And change execution status from NO-RUN to NOT-COVERED
+
+	8. Continue execution for next testcase.
+
+
+The following activities should be taken care:
+	1. Number of test cases executed.
+	2. Number of defects found
+	3. Screen shots of successful and failure executions should be 
+		taken in word document.
+	4. Time taken to execute.
+	5. Time wasted due to the unavailability of the system.
+
+
+	Note:--> During comprehensive testing. testing team report 
+		 defects to developement team. And developent team 
+		fix those defects and release new version of sofware 
+		to testing team for further testing.
+
+------------------------------------------------------------------------------------------------------>>
+Sanity Testing:-->
+		Sanity testing also a build verification testing but 
+		santity testing conducts on modified sofwares.
+
+	=> During sanity testing testing team verify application
+		stability after code modified from developement team.
+	=> Testing on new bugs and New chanages with in software
+
+	=> It is conduct on stable softwares after multiple rounds 
+		of regression Testing.
+		
+=======================================================================================================
+Retesting:-->
+	
+  To Ensure that the defects which we reported in previous build 
+	were fixed or not in current build.
+
+	For Example:-->
+	=> Say  Build#1.0 was released and we posted some defects 
+		to developement team
+	=> developement team fix those defects and release new version 
+		of software  Build#1.1 to testing team
+	=> Testing Build#1.0 defects in Build#1.1 is called Retesting
+======================================================================================================
+Regression Testing:-->
+		
+	Repeating all failed and some of passed testcase on modified software.
+	Here is the assumption when software modified to fix bugs it may 
+	effect to existing software. And their is chance of new 
+	defects invention.
+
+how long the regression testing will continue:-->
+
+     => Regression testing continues until all defects has been fixed
+
+
+     Theory:-->When your are introducing something to software, 
+		It means your are inventing new defects init.
+
+
+	when we do regression testing:-->
+		1. Any new requirement added to software
+		2. Any changes in requirements  
+		3. When Defects fix in exising software
+		4. when browser version is upgraded
+		5. When changes made in Database
+		6. When Perform testing bugs fixed
+		7. Any feature removed from webpage
+		8. When user interfaceis updated
+		
+
+
+The following activities should be take care?.
+	1. Un-covered testcase executon in previous build
+	2. Testcases which are not coverd due to unavailability 
+		of environment
+	3. Testcase which is added newly
+
+
+Note:--> Becuase regression testing is time taking due to this reason testing 
+	team follow automation tools to perform regression repeatedly.
+				
+	Regression tools available in market:-->
+			1. Selenium
+			2. UFT
+			3. RFT
+			4. CodedUI
+			5. Protractor
+			6. Katalon Studio   
+			7. Tosca
+======================================================================================================
+System Intergration Testing [SIT]:-->
+	Also know  as component integration testing
+	Othername of system testin is END to END testing
+
+	=> Some times requirements are design to use in different state 
+	   of software.Then testing team need to verify the requirement 
+	   are functioning everywhere  where client expected it to be.
+
+	=> checking a customer expecations are accomplished at entire
+	    software 
+
+
+	Note:--> Business analyst team design system integration testcase 
+		 and ask testing team to execute testcase after 
+		completed software testing by independent teams..
+=========================================================================================================
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	

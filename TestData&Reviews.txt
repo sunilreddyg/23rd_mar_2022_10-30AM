@@ -1,0 +1,141 @@
+TestData:-->
+
+	=> Most of the cases Client provide test data to testing 
+	  team,  before start test execution. 
+	  But in some cases testing team prepare sample data according to 
+	  special requirements.
+
+	
+	Que:--> How testing team know testdata specification:-->
+			=> What kind of field?
+			=> What range it accept?
+			=> What is the object type?
+
+	Ans:-->
+		Testing team receive usercase document, This document contains 
+		special requirements for each and every field..
+
+	Que:--> what if special requirements not defined for any filed.
+	
+	=> Testing team also can retrieve test data from database. 
+	    To retrieve testdata from databtase in market 
+	    there are many data genarator tools are available.
+
+	TOAD:--> Tools is used to pull testable data from database..
+
+
+	Test Data available in two categories:-->
+
+			1. Real Data
+			2. Dummy Data
+
+	RealData:-->
+		=> Real data provided by the client before 
+		   execution of your tests.
+		=> Testing team also can retrieve data 
+	           from production database.
+
+		AccountNumbers:-->
+			180023456789
+			180032455879
+		
+		University Listbox:-->
+			SV university
+			JNTU university
+
+		Emails and Passwords:-->[Valid Data]
+			qadarshan@gmail.com
+			Hello@12345
+	
+	DummyData:-->
+				
+	Testing team prepare dummy data inorder to test software 
+	Fistname Entry :--[3-100][only Alphabets][Spaces allowed]
+
+		Valid Data  :-->   abc,abcd----upto[100]
+
+		InValid Data:-->   ab,abced----upto[101]
+
+
+SqlInjection:-->
+	Que : What If parent module is under construction and we 
+	must take data from parent module inorder to test child modules.		
+					
+	=> Testing team can inject dummy testdata to database by executing
+	      database statements.
+	=> Using API's also we can inject real testable 
+	      data to software
+	
+	
+
+================================================================================================>>>
+
+Testcase Reviews:-->
+
+	After completed testcase designs, different people involve in testcase reviews
+
+		1. Peer Review
+		2. Lead Review
+		3. Developer Lead Review
+		4. Business Analyst/Project Manager Review
+
+	Why testcase reviews:-->
+		To ensure that each every functinality covered in 
+		test designs.
+
+
+	PeerReview:-->
+		It is done by another test engineer who has't written those test case 
+		but he/she is famililar with system or domain.
+			
+			1. Focus on spell mistakes
+			2. Grammar mistakes
+			3. Template format
+			4. Any duplication of Testcases
+
+		they write any remarks available in test design document.
+		After that test engineer
+		make changes in testcases and forward testcase to Testlead
+
+
+	Lead Review:-->
+		
+		It is done by team supervisor or TestLead
+			1. Functionality Coverage
+			2. Guidelines
+			3. Replications  --> Any duplication of testcase
+			4. Unnecessary testcase  --> Removal of useless testcase
+
+		
+					
+	Developer Lead:-->
+		
+	After complete testlead review. Testlead send testcase to developer lead.
+	Then developer lead involve in below reviews.
+
+	=> Are these testcase designs under guidelines of BRS and SRS document
+	=> Are their any own preditction in testcase designs by the testing team
+	=> Are testing team intrepreted any requirements to design testcase
+
+	
+	Business Analyst:-->
+		=> Are these testcase manage to test all software features
+		=> Are these testcase willing to test client features
+
+
+	ProjectManage :-->
+		Project manager give approvals to execute testcase
+------------------------------------------------------------------------------------------------------------>>>
+
+
+
+
+		
+
+		
+
+
+
+
+			
+	
