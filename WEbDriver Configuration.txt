@@ -1,0 +1,153 @@
+WebDriver:-->
+	
+	=> WebDriver invented by simmon stewart
+	=> WebDriver is a API, Which supports cross browser automation.
+	=> It is desinged to automate browser interface
+	
+Features:-->
+	=> Support CrossBrowser automation
+		[Firefox, Chrome, Safari, Opera, Edge, IE]
+
+	=> Support multiple languages to design programms
+		[Java, Python, Ruby, .Net, Javascript  --etc]
+
+	=> Support multiple operating systems to install software
+		[Windows, Mac, Linux, Solaris]
+	
+Advantages:-->
+	=> WebDriver handle dynamic applications.
+	=> WebDriver is a core API, Designed with Object oriented features.
+	=> WebDriver support dynamic timegaps with Implict & Explicit advanced waits
+	=> WebDriver had partial support on Alert handlings.
+	=> Support mobile interface automation  [Appium]
+	=> Support BDD framework [Behaviour developement driven]  [Cucumber]
+==============================================================================================
+Note:-->
+	Because webdriver is a API, So it doesn't have interface
+	to write and run autmation tests. To write and run automation
+	tests first we need to setup environment.
+
+Downloads required for webdriver:-->
+
+		1. JDK 1.8   [Java development kit]
+		2. Eclipse-IDE [Java development Version]        
+		3. WebDriver libraries    [Java language]
+
+
+	=> In Eclipse place we can also use other IDE's 
+		[Intelij, Noteplus, Editplus, Netbeans ---etc]
+
+Note:--> Before JDK and Eclipse download please find system hotspot size 
+	[32 or 64 bit].
+
+
+Download JDK 1.8 :-->
+
+	=>Before download java, Create account for oracle..
+	URL:--> https://profile.oracle.com/myprofile/account/create-account.jspx?
+        	=> Enter details click on  Create account..
+	=> This action send one confirmation email to your personal account.
+		go and verify email and change password if neccessary.
+
+	=> Download JDK 8 using below link.
+
+	URL:-->https://www.oracle.com/in/java/technologies/javase/javase8u211-later-archive-downloads.html
+	=> Under development kit  select operating system and click on download button
+	=> Then select Accept license agreement checkbox and click on jdk download button.
+	=> Enter oracle signin details to download.exe
+	=> Save file into backup drive.
+	=> it is executable jar file, use double click to start installation.
+	=> Follow installation process until receive close button.
+
+How to Check java availability:-->
+
+	=> open command prompt
+	=> Enter keyword :-->    java -version
+
+	Result is, it shows currently installed javaversion and hotspot size
+
+
+Note:--> Incase your pc have multiple java versions, We must set environment
+	variable to use current java version.
+
+Setup environment path:--> [windows 10 OS]
+
+	        ---> Right click on This PC --> Select properties
+		---> click on <<advanced system settings>>
+		---> click on <<Envirionment variable>> button
+		---> under System variable  select "path" and click edit  button
+		---> Click new button
+		---> copy bin location of JDK path
+		---> click ok button
+	
+		path :-->C:\Program Files\Java\jdk1.8.0_65\bin
+======================================================================================================>>
+Eclipse:-->   Opensource editor it supports many platform.
+
+	URL :-->https://www.eclipse.org/downloads/packages/release/photon/r
+
+	=> Download eclipse  ---> Eclipse IDE for Java Developers
+	=> Choose operating system and hotspot size.
+	=> Download zip format file 
+	=> After download unzip file to backup drive.
+	=> After unzip we receive eclipse folder and folder contains 
+			eclipse Application ICON.
+	=> Use double click to open Eclipse 
+============================================================================
+Download Selenium-webdriver:--->
+
+	URL:--> https://www.selenium.dev
+	=> click on download tab
+	=> Under Selenium Client & WebDriver Language Bindings
+	=> choose language [java] and click on download button.
+	=> System ask zip format file to download.
+	=> Save file into backup drive.
+	=> Later we extract zip file. This process give couple of jar files and we add these
+		jar files  to  javaproject...
+=========================================================================================================
+Note:--> After completed required downloads follow below 
+	 configuration to setup project....
+
+
+WebDriver Configuration:-->
+
+1. Create workspace:-->
+		=> Workspace store your projects.
+		=> Create folder at any drive and name it as "selenium-workspace"
+		=> Create sub folder and name it as "Selenium_libraries"
+		=> Dump all selenium executable jar files into "selenium libraries" folder
+
+
+2. Launch eclipse using above wokspace:-->
+
+		=>Double click on Eclipse ICON
+		=>Browser workspace and click ok button.
+		=>For the first time we recieve welcome banner, Close welcome banner
+			to reach workbench..
+
+3. Create java project:-->
+
+		=> Open Eclipse --> File Menu ----> Use New Option --->select project
+			--> open java folder ---> Select javaproject --> Enter projectname
+			---> click on finish..
+		=> After project creation find it under package explorer.
+		=> Expand project to watch default architecture of simple java project..
+
+		ProjectName
+			src
+			JRE-SystemLibraries
+
+
+4. Configure selenium libraries to java project:-->
+		
+		=> By adding these jar files we can design and execute selenium programs
+		   under java project..
+
+		=> Under project 
+		--> Right click on JRE libraries 
+		--> Select build path 
+		--> and then select configure buildpath 
+		=> It opens project properties window along with java libraries.
+		=> Click [Add external Jars] button 
+		=> And browser all selenium executable libraries.. 
+============================================================================
