@@ -1,8 +1,11 @@
 package mq.java.classes;
 
-//It is a public modifier class So that class information
-// Can be used across the project
-public class ClassB 
+class ClassB 
 {
+	
+	/*
+	 * Class declared with no modifier so that
+	 * class data can only reuse with in package
+	 */
 
 }

@@ -1,8 +1,10 @@
 package mq.java.classes;
 
-//No Modifier class only allow class information to reuse
-// with in the package
-class ClassA 
+public class ClassA 
 {
-		//Variables,Constructors,Methods
+		/*
+		 * public is a access modifier it indicated
+		 * class data can be reused across the project
+		 */
+	
 }

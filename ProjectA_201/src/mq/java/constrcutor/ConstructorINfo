@@ -1,0 +1,49 @@
+Constructor:-->
+		=> Constructor is a initializer to access class methods and variable
+		=> Other name of constructor is class instance
+		=> Every public class contains one hidden Constructor
+		=> User can define constructor manually 
+		=> To define Constructor, Name should match with class name
+		=> Constructor does't return value where as method return value
+		=> Constructor accept parameters same as methods
+		=> Each class can have more than one Constructor
+		
+		
+		=> Constructor at Hidden State
+		
+				public class TestA
+				{
+					//Assume there is always one hidden constructor available with in public class
+				
+				}
+				
+				
+		=> Constructor at visible State
+		
+				public class TestB
+				{
+					
+					public TestB()
+					{
+					
+					
+					}
+				
+				}
+				
+				
+		=> Construct can run from main method.
+		=> Syntax to run Constructor		
+		
+				new TestB();
+					
+				=> new keyword follows only class instances
+				=> Using instance we can call class instant methods and variables
+						[Which one don't have static specifier called instant methods and variables]
+				
+				new ClassName().InstantMethodname();
+				new ClassName().InstantVariableName;
+================================================================================>
+					
+				
+				
