@@ -1,0 +1,64 @@
+Note:---> object identification in Webdriver
+
+
+	*   in selenium all components recognize objects using backend
+	     html source...
+	*   To find unique object properties we need to watch page html source
+		using below options.
+
+				*  Default inspect option    [All browsers]
+				*  Truepath   [it genarate relative xpath]
+				*  chropath   [it genarate relative xpath, CssSelector]
+				
+
+Default inspect option at browser window:---->
+		
+			* open Application
+			* Press F12  (it opens html window)
+			* From HTML window pick element at webpage
+
+		Navigation:--->  Right click on element you wish to Watch element html source
+			           Select  ---->  inspect
+			            	   ---->  It Opens Html window along with Selection
+			            	   			of object properties.
+			           
+
+Locators in Webdriver:--->
+		By is a locator class at Webdriver,We have
+		list of indentification methods under By Class.
+	
+	id
+	name
+	classname
+	tagname
+	cssselector
+	xpath
+	linktext
+	partiallinktext
+	
+	Note:---> Findout any default webdriver locator identifiers  matching 
+	in highlighted area and choose unique property before start script writing...
+=====================================================================>>
+id and name locators:--->
+	
+	id and name are default locators in html source. Developer set id and name
+	for every object to recognize easier.....Setting unique identification
+	to objects is developer responsibility.
+	
+	HtmlNode:--->
+		<input id="x" class="ABC" type="email" name="user">
+
+
+	Syntax for id:-->
+		driver.findElement(By.id("x"));
+
+
+	Syntax for name:--->
+
+		driver.findElement(By.name("user"));
+		
+		Note:--> To identify location otherthan ID & name property
+				 We follow Xpath and CssSelector.These Selectors
+				 can identify object by customize html sources.
+				 
+	====================================================================
