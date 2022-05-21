@@ -1,0 +1,223 @@
+How to identify dropdown at HtmlSource And Select Option from Dropdown :---->
+--------------------------------------------------------------------------------------------------------------------
+Html Source for dropdown:-->
+
+		    
+		    
+		      <select id="Country" >
+					<option value="Ind"> India</option>
+					<option value="Usa"> America</option>
+					<option value="UK"> United kingdom</option>
+		      </select>
+		       
+		      
+	Note:-->  		At HtmlSource  Object contains Select tag only we 
+					Consider as dropdown or combobox, we use below select 
+					commands only for dropdowns.
+					
+					1. SelectByvisibletext
+					2. SelectByvalue
+					3. SelectByIndex
+					4. DeselectAll
+					5. DeselectByvisibleText
+					6. DeselectByValue
+					7. DeselectByIndex
+					8. GetOptions
+					9. GetFirstSelectedOption
+					10.GetAllSelectedOptions
+					
+					
+			Syntax:--->to select dropdown option
+			
+				//Instant selection method
+				new Select(WebElement).selectByvisibleText("Optionname);
+			
+					Select class package:--->
+					org.openqa.selenium.support.ui
+					
+	  Note:--> At Webpages most of listboxes look like
+	  dropdowns,Those listboxes we can select
+	  by using click method.
+				
+				=> selecting process for list boxes 		
+				Step1:-->   First click to open list of items
+				step2:--> 	Second click to select one of item from list.
+							
+							
+				
+					
+=======================================================
+--------------------------------
+SelectByVisibleText:--->
+--------------------------------
+	In dropdown fields All options have visible names , 
+	use option name to select any dropdown at webpage
+
+Syntax:-->
+		new Select(webelement).selectbyvisibletext("Option Name");
+
+Html Source:-->
+
+			<select id="month">
+					<option value="1">Jan</option>
+					<option value="2">Feb</option>
+					<option value="3">Mar</option>
+			</select>
+			
+Example:---> Select Feb option  from above html source using Visible text
+
+new Select(driver.findElement(By.id("month"))).selectByvisibletext("Feb");
+
+----------------------------
+Selectbyvalue:--->
+----------------------------
+	get dropdown option value from html source, For every
+	dropdown option  developer set one unique value
+	
+Syntax:--->
+		new Select(webelement).selectbyvalue("value in String");
+
+Html Source:-->
+
+		<select id="Country">
+				<option value="IND">India</option>
+				<option value="UK">United Kingdom</option>
+				<option value="USA">America</option>
+		</select>
+
+Example:---> Select option united kingdom from above source using selectbyvalue
+
+syntax:-->
+	new Select(driver.findElement(By.id(Country)).Selectbyvalue("UK");
+
+--------------------------------**********------------------------------------
+SelectByIndex:--->>
+
+	* In Dropdown options index number always start with zero
+	* index of option-tag under select tag
+
+	Syntax:--->
+		new Select(webelement).selectbyindex(index in numeric);
+	
+htmlsource:--->
+		<select name="Country">
+					<option value="IND">India</option>
+					<option value="UK">United Kingdom</option>
+					<option value="USA">America</option>
+		</select>
+
+Example:---> Select UK option from dropdown using index
+
+Syntax:-->
+		new select(driver.findElement(By.name("Country"))).SelectByIndex(1);
+============================================================
+ismultiple:---->
+
+	* method usefull to find Dropdown selection state allow multiple
+	   or single option selection
+	* ismultiple is a boolean return type it return <<<true>>> on multiple 
+	 selection, and <<<false>>> on single option selection
+
+	Syntax:--->
+	boolean flag=new Select(webelement).ismultiple();
+	System.out.println(flag);
+=============================================================
+
+==> Deselection commands:-->
+		These commands only works on multiple Selection type dropdowns.
+		
+		list of deselection commands:-->
+				deselectAll
+				deselectByindex
+				deselectByvalue
+				deselectByVisibletext
+
+Example:--->Write a program to deselect, any single option from multiple Selection 
+			using visible text
+syntax:--->
+
+	new Select(Webelement).deselectbyvisibletext("OptionName");
+----------------------------------------------------------------------------
+
+Example:--> Write a program to deselect, any single option from multiple Selection 
+		 using <<Deselectbyindex>>
+
+Syntax:-->
+	new Select(webElement).deselectbyindex(indexnumber);
+
+----------------------------------------------------------------------
+
+Example:---> Write a program to deselect, any single option from multiple Selection 
+		 using <<Deselectbyvalue>>
+Syntax:-->
+
+new Select(webelement).deselectbyValue("optionvalue");
+
+-----------------------------------------------------------------------
+
+Example:---> How to Deselect all options from selection
+
+Syntax:--->
+                 new Select(webelement).deselectall();
+===========================================================
+
+
+Dropdown Verificaton commands:-->
+
+
+		getOptions
+		getAllSelectedOptions
+		getFirstSelectedOption
+		
+getOptions:-->
+		Method collect list of option tag elements under dropdown,
+		And allowed user to verify expected options or Optioncount
+		under selected dropdown..
+		
+		Example:--> How to get Dropdown Options Count
+		
+			Select Dropdown=new Select(driver.findElement(By.id("DropdownId"));
+			int Obj_count=Dropdown.getOptions().size();
+			Systems.out.println("Object count available at dropdown is "+Obj_count)
+
+getAllSelectedOptions:-->
+
+		Note;--> This method only works on multiple selection dropdown
+		
+		=> Method collect list of options selected under multiple
+			selection dropdown.And its help verify selection count.
+			
+			
+			Example:--> How to verify maximum selection count at dropdown
+			
+			Select Dropdown=new Select(driver.findElement(By.id("DropdownId"));
+			int Selection_Count=Dropdown.getAllSelectedOptions().size();
+			System.out.println("Selected Option count is "+Selection_Count);
+
+			Note:--> Before use this command make sure dropdown is multiple
+					 option selection type.
+	
+getFirstSelectedOption():-->
+
+			=> Method verify selected option populated at dropown
+			
+			
+			example:-->
+				WebElement Dropdown_month=driver.findElement(By.id("month"));
+		
+				String Expected_month="Nov";
+		
+				//Read selected month at dropdown
+				String Act_month=new Select(Dropdown_month)
+							.getFirstSelectedOption().getText();
+		
+				if(Expected_month.equals(Act_month))
+					System.out.println("Testpass, Expected Month is Displayed");
+				else
+					System.out.println("Testfail, Expected month is not displayed");
+
+
+
+
+
+

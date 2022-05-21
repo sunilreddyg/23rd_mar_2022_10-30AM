@@ -1,0 +1,68 @@
+
+Truepath:-->
+	=> True path is extension for chrome and firefox browser
+	=> It is designed to genarate relative xpath
+
+	What is xpath:-->
+		Xpath is a Global locator builder it recognized objects
+		at user interface [At webpages] using backend html source..
+
+Install Truepath:-->
+		=> Search in google  [Truepath for chrome]
+		=> Select a proper link related to chrome browser
+		=> click on "Add to chrome" button
+		=> click on add extesion to complete installation
+
+How do i use truepath:-->
+
+	Method1:-->
+		=> first select a element at webpage and right click on it
+		=> It display context menu and place cursor on "Relative xpath"
+		=> it display 3 different options to choose
+				1. Xpath with id,href,src
+				2. Xpath with name,title,class
+				3. Xpath with index
+		=> choose any one option 
+			[Because true path display all possible identificaitons]
+		=> It opens trupath window, then copy xpath
+		=> it copied to clipboard and you can paste where it required
+
+	Method2:-->
+		=> use this method when Right click is disabled at webapge
+		=> Open Webapge and Press F12
+		=> It opens Developer window
+		=> Select Object at webpage from developement window
+		=> It highlight the HtmlNode
+		=> Open style and Computed values window ,which you can find
+			right side at Developement window
+		=> click  Next Icon button   ">>"
+		=> Select true path option
+		=> It display more variants of relative xpath ans absolue path
+		=> click on copy option and use where it required
+=======================================================================>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

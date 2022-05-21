@@ -24,6 +24,10 @@ public class Sendkeys_Keyboard_Shortcuts {
 		
 		//Selecting dropdown options using Multiple Keyboar keys
 		driver.findElement(By.id("month")).sendKeys(Keys.ARROW_DOWN,Keys.ARROW_DOWN);
+		
+		
+		
+		
 
 	}
 
