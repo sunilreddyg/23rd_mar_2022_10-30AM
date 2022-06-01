@@ -1,0 +1,121 @@
+ Mouse Interactions at webdriver:-->
+
+		In Webdriver all mouse interaction commands
+		available at "Actions" class.
+		
+		1. Click          [It Analog left click at mouse]
+		2. DoubleClick
+		3. ContextClick   [It Analog right click at mouse]
+		4. MovetoElement
+		5. ClickAndHold
+		6. Release
+		7. DragAndDrop
+		8. DragAndDropBy
+		
+	    Action Methods:-->
+	    		
+	    		1. Pause
+	    		2. Build
+	    		3. Perform
+	    		
+	   Note:--> Inorder to use mouse interactions, we should
+	   			create object for <<  Actions  >> class.
+	   			
+==================================================================
+Click:-->
+		method analog left click action using mouse.
+		==> mouse left click option at webpage.
+		
+		Syntax:-->
+				new Actions(driver).Click().perform();
+
+		Syntax:-->
+				WebElement Element=driver.findElement(By.id("LocationID"));
+				new Actions(driver).click(WebElement).perform();
+
+MovetoElement:-->
+	    method analog Hover action at element.
+	    
+	    Syntax:-->
+				new Actions(driver).movetoElement(WebElement).perform();
+				
+DoubleClick:-->
+		
+		perform double click on Selected target/Webapge.
+
+		 Syntax:-->
+				new Actions(driver).doubleclick().perform();
+				new Actions(driver).doubleclick(WebElement).perform();
+				
+ContextClick:-->
+		Method analog right click option at mouse.			
+				
+		 Syntax:-->
+				new Actions(driver).ContextClick().perform();
+				new Actions(driver).ContextClick(WebElement).perform();		
+				
+
+ClickAndHold:-->
+		Method hold mouse left click button down, And allowd use
+		drag mouse to any expected target at webpage.
+			[Text selections at webpage]
+			[Group of option selections]
+			[Drag object from source locationt to any destination at webpage]
+			
+		Syntax:-->
+				new Actions(driver).ClickAndHold(WebElement src)
+				.MovetoElement(WebElement dst).Release().perform();
+
+
+		Note:--> We should use ClickAndHold & MovetOElement & Release as
+				 combination inordert to perform any single action.
+
+DragAndDrop:-->
+		Method allow user to drag source element to target location.
+		
+		Syntax:-->
+			WebElement Src=driver.findElement(By.id("X"));
+			WebElement Dst=driver.findElement(By.id("Y"));
+			new Actions(driver).DragAndDrop(Src,Dst).perform();
+		
+DragAndDropBy:-->
+		Method allows to drag any Single element to perticular
+		x and y offset coordinations at webpage.		
+		
+	    Syntax:-->
+	    	WebElement Src=driver.findElement(By.id("X"));	
+	    	
+	    	//Dragging horizontal 50 coordinates from source.
+	    	new Actions(driver).DragAndDropBy(50,0).perform();	
+	    	
+	    	//Vertical dragging 50 coordinates from Source
+	    	new Actions(driver).DragAndDropBy(0,50).perform();	
+
+=======================================================================		
+Actions Methods:-->
+	
+	Perform:-->
+				Without Perform method all mouse and keyboard
+				interaction are incomplete.
+				
+		Syntax:-->
+			new Action(driver).click(WebElement);   		//Incomplete Action
+			new Action(driver).click(WebElement).perform(); //Complete Action  
+		
+Build:-->
+		Any group of mouse and keyboard actions to build as single option.
+		
+				
+		Syntax:-->
+			new Actions(driver).click(Webelement).click(WebElement)
+				.build().perform();		
+				
+pause:-->
+		While using any mouse actions we can send interval timegap
+		using milliseconds.
+		
+		Syntax:-->
+			new Actions(driver).movetoelement(WebElement)
+			.pause(2000).perform();
+			
+		
