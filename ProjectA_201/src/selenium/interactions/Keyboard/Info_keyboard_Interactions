@@ -1,0 +1,48 @@
+Keyboard interactions:--.
+
+		These interaction commands we can find under 
+		<< Actions >> class.
+	
+		1. Sendkeys
+		2. KeyDown
+		3. KeyUp
+		
+Sendkeys:-->
+		Accept character sequences and keyboard shortcuts.
+		
+	   Example:-->  use Escape shortcut on browser.
+	   
+	  			    new Actions(driver).Sendkeys(keys.ESCAPE).perform();
+		
+	   Example:-->  use TAB shortcut on location
+	   
+				   WebElement Element=driver.findElement(By.id("locationid"));
+				   new Actions(driver).Sendkeys(Element,Keys.TAB).perform();
+				   
+Keydown:-->
+		usefull for press Downkeys  like  [Shift,Alt,Control --etc]
+		
+		Example:-->
+				use keyboard shortcut Ctrl+Alt+T
+	   
+	   new Actions(driver).Keydown(Keys.CONTROL).keydown(Keys.ALT
+			.Sendkeys(keys.chord("T")).perform();	  
+			
+		new Actions(driver).Keydown(Keys.CONTROL).keydown(Keys.ALT
+			.Sendkeys("T").perform();	  
+			
+KeyUP:-->
+		usefull to release keydown action.
+		
+		Example:-->
+				use keyboard shortcut Ctrl+Alt+T
+	   
+	   new Actions(driver).keyUp(Keys.CONTROL).KeyUp(Keys.ALT).perform():	 
+		
+		
+		
+		
+		
+			
+			 
+	   
