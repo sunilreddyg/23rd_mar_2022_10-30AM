@@ -1,0 +1,20 @@
+javascript executor:-->
+
+	=> 	Javascript executor is a interface class. It allows
+			to make runtime changes at automation browser partially.
+			
+	=>   JavaScript Interface class inject Original javascript 
+			into runtime browser to automate web interfaces.
+
+When to use javascript Executor:-->
+
+ 	Because of cross domain policies browsers enforce your 
+ 	script execution may fail unexpectedly and without 
+	adequate error messaging. mostly happend when trying to 
+	access another frame. 
+ 
+
+		 * Note:--> 
+		 *  Most times when troubleshooting failure it's 
+		 *  best to view the browser's console after 
+		 *  executing the WebDriver request.
