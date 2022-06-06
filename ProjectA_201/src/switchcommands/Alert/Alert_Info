@@ -1,0 +1,54 @@
+
+Alert:-->
+		Developer most commonly use alerts at webpage to display
+		info messages.these alerts disable page until it closed.
+		
+		Types of alerts:-->
+					1. Alert Popup window.            [alert with ok button]
+					2. Confirmation alert window      [alert with ok and cancel button]
+					3. prompt window				  [alert with entry box,ok, cancel button]
+					
+		How to find alerts at webpage:-->
+			=> Alerts display info message in separate popup window, 
+				And when alert presented user can't access other elemnts
+				at webapge until alert closed.
+				
+			=>   
+							1. UnhandledAlert Excepiton
+							2. NoAlertpresented Excepiton
+		/*
+		 *  Alert exceptions In selenium:-->
+		 * 	1. UnhandledAlertException:-->
+		 * 			Exception present when alert was not handled at webpage
+		 * 	2. NoAlertPresentedException:-->
+		 * 			Exception present when expected alert not prompt at webpage.
+		 */		
+===========================================================	 
+ accept:-->
+ 		  Method Close alert at webpage  [Click ok button at alert]
+ 		  
+ 		  Syntax:-->
+ 		  			driver.switchto().alert().accept(); 
+dismiss:-->
+		 Method accept/dismiss alert at webpage  [Click Cancel Button at alert]
+		 
+		 Syntax:-->
+ 		  			driver.switchto().alert().dismiss(); 
+getText:-->
+		 Method capture text presented at alert.
+		 
+		 Syntax:-->
+ 		  		String alert_msg=driver.switchto().alert().getText();
+		 		System.out.println(alert_msg);	 		
+sendkeys:-->
+		Method send characters at editbox inside alert window.
+		
+		Syntax:-->
+ 		  	   driver.switchto().alert().sendeys("text");
+ 		  	   
+=====================================================================
+ 		  	   
+		 			
+		 	
+							
+							
