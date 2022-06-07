@@ -1,0 +1,136 @@
+ Frame:--->
+	* a frame is a part of a web page or browser window 
+	* Frame has ability to load content independent like webpage.
+	* In selenium under frame source any element to identify, First
+		we need to switch controls from webpage to frame.
+		
+How to identify frame at Webpage:-->
+	
+			=> When user right click on element, At context menu
+					it display  Thisframe [for firefox] / View frame source[for chrome] options.
+					
+			=> We can find a frame by search under selector  [Xpath /CssSelector]	
+							Xpath :-->  //iframe   [or]   //frame
+						    CssSelector:--> iframe [or]   frame
+			
+			=> We can also find frame using Truepath plugin.
+					=> For frame under elemnets truepath plugin genarate
+							separate xpath.
+							
+			=> During recording time selenium IDE identify frame
+				and genarate script to handle frame
+	
+----------Html source for frame elements------------------>
+<html>
+<body>
+	<div id="reg">
+		<div id="UID">
+			<input id="email">
+		</div>
+	</div>	
+	<frame id="newframe" name="f1"  class="reg_account">
+	       <html>
+				<body>
+					<div id="login"
+						<div id="fname">
+							<input id="firstname">      --->Element
+						</div>
+					</div>
+				</body>
+	        </html>
+	  </frame>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------
+Example;-->
+	Switch to frame using Webelement Locator when 
+	frame Node not contains ID /Name property:===>
+
+Syntax:--->
+	driver.switchTo().frame(WebElement Element);
+
+
+Example:--->Target firstname object under frame
+		
+		WebElemen Frame_Element_ref=driver.findELement(By.xpath("//frame[@class='reg_account']"));
+		driver.switchTo().frame(Frame_Element_ref);
+		driver.findElement(By.id("firstname"));
+---------------------------------------------------------------------------------------------------->
+Example:-->
+	Switch to frame using  frame name:---->
+	Note:--> We can direclty deifine switch to frame
+			 when it have ID / Name property
+
+	Syntax:--->
+	driver.switchTo().frame(String framename_or_ID);
+
+Example:--->
+		using above source find Frame Elemnet 
+	
+		driver.switchTo().frame("f1");
+		driver.switchTo().frame("newframe");
+		
+		==> Identify location under frame
+		driver.findElement(By.id("firstname"));
+		
+--------------------------------------------------------------->
+Example:-->
+	Switch to frame using index number:--->
+
+Syntax:--->
+	driver.switchTo().frame(int index);
+
+Example:--->
+		using above source find Frame Elemnet 
+		driver.switchTo().frame(0);
+		
+		==> Identify location under frame
+		driver.findElement(By.id("firstname"));
+
+----------------------------------------------------------------------------------------------------------------------->
+How to Switch one frame to another frame
+
+	1. Switch to FirstFrame
+		driver.switchTo().frame(String framename);
+
+	2. Get Controls from firstframe to mainpage
+		driver.switchTo().defaultContent();
+
+	3. Apply switch to Second Frame
+		driver.switchTo().frame(String framename);
+---------------------------------------------------------------------------->
+How to Switch to parent frame:---->
+	under parent frame switch required between two sub frames. To get
+	controls to parent frame we follow below syntax
+
+	driver.switchTo().parentframe();
+================================================================>
+Frame Syntax:-->
+		=> When frame have ID and Name Property
+		driver.switchTo().frame("ID/Name");
+		
+		=> Frame Have different properites otherthan ID
+		driver.switchTo().frame(driver.findElement(By.className("Class")));
+		
+		=> Switching to frame using index number.
+		driver.switchTo().frame(5);
+================================================================>>
+Note:--> selenium ide can record frame actions.
+
+
+
+NosuchElement Exception:-->  
+	[When Do we get Nosuch Elemnet exception]
+	[How to trouble shoot no such element exception]
+
+	=> When you are at wrong page
+	=> When Dynamic objects are loading to page slowly
+	=> When ID is dynamically Changing
+	=> When object is under frame available 
+
+
+
+
+
+
