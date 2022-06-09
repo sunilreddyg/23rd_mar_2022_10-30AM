@@ -16,11 +16,15 @@ public class SwitchToSecondWindow {
 		WebDriver driver=new FirefoxDriver();     //Launching browser method
 		driver.get("https://www.instagram.com");
 	    driver.manage().window().maximize();
-	    
+	   
 	    //Hyper link open page at new window
 	    WebElement Blog=driver.findElement(By.linkText("Blog"));
 	    Blog.click();
 	    Thread.sleep(4000);
+	    
+	    
+	    //Get Main window Handler
+	    String Mainwindow=driver.getWindowHandle();
 	    
 	    //Get All Window Handles
 	    Set<String> AllWindowIDS=driver.getWindowHandles();
@@ -35,7 +39,9 @@ public class SwitchToSecondWindow {
 	    System.out.println("Second window title is --> "+driver.getTitle());
 	    
 	    
-	    
+	    //Switch back to mainwindow
+	    driver.switchTo().window(Mainwindow);
+	    System.out.println("MainWindow title is ---:> "+driver.getTitle());
 	    
 	    
 	    
