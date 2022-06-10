@@ -1,0 +1,238 @@
+Variable:-->
+
+	Variable is temparory memory location to store value.
+	In java programming values can be stored into variable according
+	to the datatype only.
+
+Datatype:--->
+	=> Datatype alocate memory type and memory size to variable.
+	=> Same as other programming languages Java also allow datatype to 
+		store values.
+	
+	
+	primitive datatypes            		 Non-primitive datatypes
+
+	byte									String
+	short									Arrays  -----etc
+	int
+	long
+	char
+	boolean
+	double
+	float
+
+=================================================================
+Type 		 	Range
+byte 	   		-128 to 127
+short 		 	-32,768 to 32,767
+int 	    	-2,147,483,648 to 2,147,483, 647
+long 			-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float 			approximately ±3.40282347E+38F    (8  decimals)
+double 		 	approximately ±1.79769313486231570E+308  (15 decimals )
+char 			single character
+boolean 		true or false	
+================================================================
+
+How to store value in non primitive datatype:?----->
+
+	Syntax to store String values:---> String allow set of characters to store.
+
+			String email="sunireddy.gajjala@gmail.com";
+			String name="sunil";
+			String mobile_num="9659876585";
+
+====================================================>
+Variable Inititation:-->
+	
+	1. Local initiation    [usefull to store static values]
+		
+		int a=10;
+	
+	2. Global inititation   [Usefull to store runtime value]
+
+		int a;
+		a=10;
+		a=20;
+		
+	3. Global initiation    [using multiple variables]
+			
+		int x,y,z;
+		x=100;y=200;z=300;
+			
+==========================================================>>
+Variable Declaration to follow:--->
+
+	=>characters                   	[String email="darshan@gmail.com]
+	=>characters+Numbers     		[int a1=100]
+	=>characters with underscore  	[ String  mobile_number="9030248855"]	
+
+
+Variable Declaration not-to follow:-->
+	=> Numbers+characters
+	=> Don't include space
+	=> Don't include special characters.
+
+--------------------------------------------------------------------------------------------------------------------------->>>
+
+Types of variables available in Java?...>
+
+	
+	1.Local Variable
+	2.Instant variable
+	3.Class Variable  [Static Variables]
+
+
+1.Local Variable:--->
+
+	These variables define inside method, it can't share inforamtion
+	to other methods also for  other classes.
+	
+	Syntax:--->
+
+		public class Phone
+		{
+			void Landphone()
+			{
+				int price=100;
+				system.out.println(price);
+			}
+
+			void mobile()
+			{
+
+				system.out.println(price);
+			//local variable can't share information to other methods
+					
+			}
+		}
+====================================================================
+	Syntax:--->Real Application  (Local Variable)  dis advantages 
+
+		public Hotmailhomepage
+		{
+				public void launchApplication()
+				{
+					WebDriver driver=new firefoxDriver();
+					driver.get("http://hotmail.com");
+					driver.manage().window().maximize();
+				}
+			
+				public void signin()
+				{
+					//WebDriver method we can't access because 
+					we define webdriver interface locally
+			
+				}
+		
+		}
+		
+------------------------------------------------------------->>>>
+Instant Variable:---->
+
+		Instant Variable Define Inside the class but outside the 
+		method , these variable can access across method and classes
+
+	Note:--. We should create object to access instant variable from outside class
+		
+		==>Object creation to access instant variable
+		   classname ref=new classname();
+		   datatype val=ref.variablename;
+			
+			Note:--> All variables return values.
+
+	Syntax:--->
+
+		public Phone
+		{
+			public int price=100;
+	
+			void Landphone()
+			{
+				system.out.println(price);
+				//Variable information can be used 
+			}
+
+			void mobile()
+			{
+
+				system.out.println(price);
+				//Variable Inforamtion can be used 
+			}
+		}
+----------------------------------------------------------------
+
+	Syntax:--->Real Application  (Instant Variable Example)
+
+		public Hotmailhomepage
+		{
+			   WebDriver driver=null;
+
+				public void launchApplication()
+				{
+			
+					driver=new firefoxDriver();
+					driver.get("http://hotmail.com");
+					driver.manage().window().maximize();
+				}
+			
+				public void signin()
+				{
+					//webdriver controls we receive because
+					//Webdriver class initiated as global
+			
+					driver.findElement(By.id("i0112"));
+					driver.getTitle();
+				}
+		
+		}
+
+------------------------------------------------------------------------------------------------------>>>
+class variable:--> class variables are similar to instant variables, 
+					only diff we declare class variables with static keyword.
+	
+		Note:--> static variables we can access without object creation.
+			Object variable=Classname.variablename;
+
+	Syntax:--->
+	
+		public Phone
+		{     
+				public static int price=100;
+	
+				public void  Landphones()
+				{
+					system.out.println(price);
+					//Variable information can be used 
+				}
+
+				public static void mobile()
+				{
+					system.out.println(price);
+					//Variable Inforamtion can be used 
+				}
+		}
+===================================================================>
+final:-->
+		final keyword restrict to change values at runtime.It doesn't
+		allow ovveride values...
+		
+	Syntax:-->
+				
+			public class Final_Exp
+			{
+				static int a=100;
+				final static int b=200;
+				
+				public static void main(String args[])
+				{	
+						a=200;
+						S.o.p("new a value is => "+a);
+						
+						Note:--> final keyword variable we can't override.
+				}
+			}
+=============================================================================		
+		
+		
+		
+		
