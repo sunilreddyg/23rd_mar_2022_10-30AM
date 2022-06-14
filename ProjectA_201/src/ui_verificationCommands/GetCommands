@@ -1,0 +1,194 @@
+UserInterface verification commands:-->
+
+	 In Webdriver all verification commands starts 
+	 with <<get>. keyword. These commands work like
+	 checkpoints at webpage.
+	 
+	 These commands categorized into two types
+	 		1. Page verification commands
+	 		2. Element Verification commands 		
+	 1. Page Verification commands
+	 			
+	 			getTitle
+	 			getCurrentUrl
+	 			getPageSource					driver.getTitle();
+	 			getWindowHandle
+	 			getWindowHandles
+	 2. Element Verification commands
+	 
+	 			getText
+	 			getAttribute
+	 			getCssselector
+	 			getLocation				driver.findElement(By.id("id")).getText();
+	 			getSize
+	 			getTagname
+	 			getRect
+	 
+	3.Dropdown verification commands 
+	[This methods only work for select tag elements]
+			
+				getFirstSelectedOption
+				getAllSelectedOptions
+				getOptions
+				
+				new Select(WebElement).getOptions();
+	 			
+====================================================
+getTitle:--->
+			method capture current window title at runtime.
+			In webpapplication every page contain indepedent title.
+			By capture runtime title we can verify expected page
+			displayed at browser window.
+		
+			Syntax:-->
+					String Runtime_title=driver.getTitle();
+					System.out.println(Runtime_title);				
+====================================================================		
+getCurrenturl:-->
+				method capture current window Url at runtime.
+				In web application every page contains uniqe URL.
+				By capture runtime url we can verify expected page
+				displayed at browser window.
+			
+			Syntax:-->
+					String Runtime_url=driver.getCurrentUrl();
+					System.out.println(Runtime_url);				
+========================================================
+getPageSource:--->	
+			Method capture Entire pageSource into String format
+			during runtime.  [Backend HTML source]
+			
+			With in soruce we can verify
+			
+					Element ID's  &  HMTL Nodes 
+					Title of a page
+					url of a page
+					page Text
+		
+			String pageSource=driver.getpageSource();
+			System.out.println(pageSoruce);	 
+=============================================================
+getwindowsHandle:-->
+			Method return active window dynamic ID
+			[Using window we can switch between any two windows]
+			[This window id different from one browser to another browser]
+			
+			String Dynamic_Window=driver.getWindowHandle();
+			System.out.println(Dynamic_Window);
+=====================================================================
+getWindowHandles:-->
+			Method return all window dynamic id's currently 
+			open using webdriver code.
+			
+			Set<String> All_windowIDs=driver.getWindowHandles();
+			System.out.println(All_windowIDs);		
+==================================================================
+getText:-->
+		
+		Method capture visible text using location.from the
+		backend it capture innertext from the selected node.
+		=> It capure selected node and child node text as well.
+	Syntax:--->
+				  WebElement Element=driver.findElement(By.id("x"));
+				  String Element_text=Element.getText();
+				  System.out.println(Element_text);	  
+			Note1:--> if selected element not contains any text, method
+				      return empty status.  
+			Note2:--> Method capture selected element and it's child
+					  innertext.	  
+			Note3:--> Method capture only visible text on webpage,In case element  
+							is hidden gettext method return empty status.
+					
+				Que:-->What we can verify with gettext?..  
+						
+						* We can verify Status messages visible at webpage
+						* We can verify error messages visible at webpage
+						* We can verify expected text visible at webpage				
+=======================================================================		
+getAttribute("propertyname");
+	
+	Method capture runtime attribute value using attributename.
+				    
+		Syntax:-->  
+		  	WebElement Element=driver.findElement(By.id("x"));
+		  	String value=Element.getAttribute("attributename");
+		  	System.out.println(value);	
+			  	
+  	Note:--> Developer use attributes, to chanage runtime
+  			behaviour of element. by capture element attributes
+  			at runtime we can prove element behaviour available
+			w.r.t client requirement.		  				
+Example:-->
+			   Captrue editbox input value.
+			   	Syntax:-->  
+			   	//Identify Editbox
+				WebElement Editbox=driver.findElement(By.id("x"));	
+					
+				//Get Input from Edtibox
+				String InputData=Editbox.getAttribute("value");
+				System.out.println(InputData);		 
+===============================================================================
+getCssvalue:-->
+			Method capture selected element styles at webpages.
+						font
+						font-size
+						color
+						background-color
+						text-alignment				
+		Syntax:-->
+			//Identify Element
+			WebElement Element=driver.findElement(By.id("x"));
+			String text_font_size=Element.getCssvalue("font-size");	
+			System.out.println(text_font_size);
+===============================================================================			
+getLocation:--->
+				Method capture selected element location at webpage
+				and return x and y coordinates of object
+				
+				Note:--> getLocation return type is point. Point return
+						 object x and y coordinates.
+	
+				Syntax:-->
+				
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					Point Obj_point=Element.getLocation();
+		
+					//using object point get x and y coordinates
+					int obj_x=Obj_point.getX();
+					System.out.println("Object x coordinates  "+obj_x);
+					
+					int obj_y=Obj_point.getY();
+					System.out.println("Object y coordinates  "+obj_y);	
+===========================================================================
+getsize:-->
+				Method capture selected element dimension at webpage
+				and dimesnion return height and width of object.
+			
+				Syntax:-->
+				
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					Dimension Obj_dimension=Element.getSize();
+		
+					//using object dimension get object height and width
+					int obj_height=Obj_dimension.getheight();
+					System.out.println("Object height is "+obj_height);
+					
+					int obj_width=Obj_dimension.getWidth();
+					System.out.println("Object width is "+obj_width);	
+=======================================================================
+	
+	
+	
+	
+	
+	
+			
+			
+			
+			
+						
+	 			
