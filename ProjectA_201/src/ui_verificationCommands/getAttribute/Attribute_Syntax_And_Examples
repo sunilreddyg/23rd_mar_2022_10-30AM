@@ -1,0 +1,42 @@
+getAttribute("Attributename");
+
+		=> get attribute mehtod return runtime attribute value using 
+		it's attribute name
+
+		Syntax:-->
+			WebElement Element=driver.findElement(By.id("id"));
+			String Attributevalue=Element.getAttribute("AttributeName");
+
+
+Html Object:-->
+
+	<input id="email" style="display:none" type="text" >
+	
+			WebElement Email=driver.findElement(By.id("email"));
+			String Rvalue=Email.getAttribute("style");
+			System.out.println(Rvalue); ---------------------> display:none
+
+			String Email_type=Email.getAttribute("type");
+			System.out.println(Email_type);-------------------> text
+			
+Html object:-->
+
+	<input id="password"  disabled="disabled" type="text">
+
+			WebElement Password=driver.findElement(By.id("password"));
+			String RDvalue=Password.getAttribute("disabled");
+			System.out.println(RDvalue);------------------------->true
+
+
+	<input id="email" readonly type="email">
+
+			WebElement Email=driver.findElement(By.id("email"));
+			String REvalue=Email.getAttribute("readonly");
+			System.out.prinln(REvalue); ---------------------------->true
+====================================================================================================>>
+
+How to capture input from editbox?.
+		
+		WebElement Editbox=driver.findElement(By.id("EditboxID"));
+		String InputValue=Editbox.getAttribute("value");
+		System.out.println("Inserted input values at editbox is --> "+InputValue);

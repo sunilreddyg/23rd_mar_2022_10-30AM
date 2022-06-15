@@ -99,6 +99,7 @@ getText:-->
 			Note3:--> Method capture only visible text on webpage,In case element  
 							is hidden gettext method return empty status.
 					
+					
 				Que:-->What we can verify with gettext?..  
 						
 						* We can verify Status messages visible at webpage

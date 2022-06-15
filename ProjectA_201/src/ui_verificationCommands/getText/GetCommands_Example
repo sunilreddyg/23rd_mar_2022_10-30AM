@@ -1,0 +1,19 @@
+
+	<div id="Sbtn" style="display:block">  Account Active </div>
+
+
+	WebElement location=driver.findElement(By.id("Sbtn"));
+	
+	==> Reading text at location
+	String text=location.gettext();
+	System.out.println(text); ----------------> Account Active
+
+
+	==> Reading attribute value using it's attribute name
+	String value=location.getAttribute("style");
+	System.out.println(value); ----------------> display:block
+
+
+	-==> Reading location tagname
+	String eletagname=location.getTagname():
+	System.out.println(eletagname); ----------------> eletagname
