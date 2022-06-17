@@ -1,0 +1,29 @@
+
+
+Scenario: Verify Double seat fares disability
+
+	Given Site url http://makemytrip.com
+	When user select Roundtrip radio button
+	Then verify Double Seat Fares Disabled at webpage
+	
+Scenario: Verify Double seat fares feature enabled
+	
+	Given Site url http://makemytrip.com
+	When user select Oneway radio button
+	Then verify Double Seat Fares enabled at webpage
+	
+Scenario: Verify Signup button enabled status
+	Given site url http://instagram.com
+	When User click on Signup now
+	Then system load singup page
+	When User enter valid mobilenumber,phonenumber,username,password
+	Then verify Signup button comes to enabled state..
+	
+Scenario: Verify Signup button disabled status
+	Given site url http://instagram.com
+	When User click on Signup now
+	Then system load singup page
+	And Verify Singup buttion is disabled before enter valid details
+	
+	
+	
