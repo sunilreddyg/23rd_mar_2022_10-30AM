@@ -1,0 +1,93 @@
+User interface validation commands:-->
+	All validation commands return boolean value true/false.
+	These methods validate expected behavour at webpage
+	and return result in boolean format.
+	
+				IsDisplayed
+				IsEnabled
+				IsSelected		
+=>isDisplayed:-->
+			Method verify element visibility or hidden state
+			and return boolean value true/ false during runtime...
+			
+			=> Method return true when selected element visible at webpage
+			=> Method return false when selected element hidden at webpage
+			
+		syntax:-->
+				WebElement Element=driver.findElement(By.id("X"));
+			
+				boolean flag=Element.isDisplayed();
+				system.out.println("Element visible Status  "+flag);
+=========================================================================		
+=>IsEnabled:-->
+				=> Method verify element enabled or disabled status
+				=> Boolean return type method, Only return true/false.
+				=> Method return true when selected element ready state is ON    
+						[Element is enabled and accept all type of actions]
+						
+				=> Method return false when selected element ready state is OFF  
+						[Element is disabale and not accepting any type of action]
+							
+				Note:--> InEnabled method only works when html object
+						 have disabled="disabled" property 
+						 [Only when your are checking disabled property]
+			
+			HtmlSource:-->
+				<input id="email"  disabled="disabled">
+			
+			Syntax:-->
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					boolean flag=Element.IsEnabled();
+					System.out.println("Element Enabled "+flag);
+					
+		
+=====================================================================							
+=>IsSelected:-->			
+			Method return true/false  on element selection state
+			This method only works for radio buttons and checkboxes.
+			
+			Note:--> Real radio buttons which contains input tag and properties
+						type="radio" or  type="checkbox"
+			
+			Syntax:-->
+					//Identify Element
+					WebElement Element=driver.findElement(By.id("x"));
+					
+					boolean flag=Element.Isselected();
+					System.out.println("Element Selected "+flag);
+					
+		
+-------------------------------------------------------------			
+Example:--> Inorder to select/deselect checkbox we need to follow
+			below syntax.Because checkboxes to select and deselect 
+			we follow same command [Click..]
+	
+to deselect checkbox :---->
+
+			//Identify Element
+			WebElement Checkbox=driver.findElement(By.id("x"));
+	
+			if(Checkbox.isSelected())
+			{
+				Checkbox.click();
+			}
+	
+	
+	
+to select checkbox:-->
+
+			//Identify Element
+			WebElement Checkbox=driver.findElement(By.id("x"));
+	
+			if(!Checkbox.isSeelcted())
+			{
+				Checkbox.click();
+			}
+			
+			
+			
+			Note:--> IsSelected method only work for real checkboxes
+					<input type="checkbox" id="Remember">
+---------------------------------------------------------------------------------------------------------------------------------------------------->
