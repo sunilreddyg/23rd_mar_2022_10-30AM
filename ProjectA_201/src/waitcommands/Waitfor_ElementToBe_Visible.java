@@ -28,6 +28,7 @@ public class Waitfor_ElementToBe_Visible {
 		//Wait until Login button receive clickable action
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[contains(.,'Log In')])[7]"))).click();
 		
+		
 	}
 
 }
