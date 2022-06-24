@@ -1,0 +1,99 @@
+Loops:-->
+		Looping is a programming feature, Which repeatedly evaluate
+		set of programs or instruction[Statements].
+		
+		1.For-loop
+		2.For-each
+		3.While
+		4.Do-while
+		
+		Advantages:-->
+				=> Reduce lines of code..
+				=> Easy to perform repeated tasks.
+		
+		
+1.For-loop:-->
+		=> programer follow for-loop, whenever need to iterate
+			any perticular condition to evaluate expected number 
+			of times.
+			
+		=> During for loop programmer should define start-iteration
+				and end-iteration value.
+				
+				
+		Syntax:-->
+				
+				for(Variable initiation ;  Condition  ; increment/decrement)
+				{
+					//write programs here to execute repeatedly..
+				}
+				
+				
+				=> For-loop accept initiation of variable only numerics.
+				=> For-loop accept iteration when condition return true,
+						And it follow iteration until condition return false.
+				=> We can also eject looping by writing  break;  keyword.
+				
+				
+				Example:--> [Print numbers 1 to 10]
+			
+				for(int i=1 ; i<=10 ; i++)
+				{
+					systems.out.println(i);
+				}		
+				
+===============================================================================>		
+Foreach:-->
+			Foreach loop usefull to iterate Arrays and collection next values.
+			
+			for(Variable : Arrayname)
+			{
+				//Iteate based on array size.
+			}
+			
+			
+			=> Loop iterate until collection objects available at array
+			=> For each iteration, Array release one value to variable index wise.
+		
+=====================================================================
+while:-->
+	=> While is a condition based loop.
+	=> While accept only boolean conciditon
+	=> While accept loop when condition return true
+			and continue iteration until condition return false.
+	=> During while loop we should provide icrement/decrement
+			or Any condition to break loop othewise it get into
+			infinity loop.
+
+
+		Syntax:--> 
+				while(condition)
+		 		{
+		 
+				}
+			
+		=> While accept only boolean value.	
+			
+====================================================================
+Do-While:-->
+		Do while work similar as While loop,But only diff do-while
+		accept iteration once even condition return false.
+		
+		
+		do
+		{
+		
+		}while(condition);			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+						
+				
+				
+				

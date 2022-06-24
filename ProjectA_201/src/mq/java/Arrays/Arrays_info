@@ -1,0 +1,83 @@
+Arrays:-->
+		
+		Arrays store set of similar values into single
+		reference.
+		
+		
+		Array Declaration:-->
+						int a[];
+						int []b;
+			Note:--> Array delceared with open close square braces []
+					Braces will be defined array before of after
+			
+					1. Static Array
+					2. Runtime Array
+					
+		1. Static Array:-->
+				=> During static array programmer define fixed
+					boundaries inorder to store group of values.
+				=> If bounday range is exceded it throws exception
+						"Out of boundary exception."
+				=> Array number starts from zero
+									
+					=> Static arrays can declare in two different ways
+							1. Single Dimensional array
+							2. Double Dimensional array
+							
+			=> Single dimensional static array.
+			
+				 String arrayname[]=new String[5];				
+				 arrayname[0]="Apple";
+				 arrayname[1]="Samsung";		
+				 arrayname[2]="LG";
+				 arrayname[3]="OnePlus";
+				 arrayname[4]="BlackBerry";
+				 
+		 		 => Print Oneplug value
+		 		 System.out.println(arraname[3]);
+		 		 
+		 		 
+		 		 => Double Dimensional static array
+		 		 		[it represent tabular format to store data]
+		 		 
+		 		 String data[][]=new String[3][2];		 
+				 
+				 data[0][0]="Rajesh";
+				 data[0][1]="EMP001";
+				 
+				 data[1][0]="Sanjay";
+				 data[1][1]="EMP002";
+				 
+				 data[2][0]="Amrutha";
+				 data[2][1]="EMP003";
+				 
+				 => Print sanjay name
+				 System.out.println(data[1][0]);
+				 
+				 
+		
+		=> Runtime Array:-->
+				=> During runtime array declaration programmer
+					no need to define fixed boundaries, It arrange
+					index values based on dynamic data assigned.		 
+				 
+				 => [Single dimensional runtime array.]
+				 
+				 	String tools[]={"IDE","RC","WD","GRID","APPIUM"};
+				    => Print WD tool name
+				    System.out.println(tools[2]);
+				    
+				    int num[]={100,200,300,400,500,600};
+				    => print 400 value
+				    System.out.println(num[3]);
+				    
+				=> [Double Dimensional rutime array..]
+					
+					String userdata[][]=
+									{
+										{"Rajesh","EMP001"},
+										{"swathi","EMP002"},
+										{"sandeep","EMP003"},
+									};
+					=>Print EMP002
+					System.out.println(userdata[1][1]);
