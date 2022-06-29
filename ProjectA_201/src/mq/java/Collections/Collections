@@ -1,0 +1,138 @@
+Collections:-->
+			Collections store set of objects into single
+			referenced variable same as Arrays.
+			
+			=> Collection allow runtime enhancements like
+					Adding and removing objects, where as
+					Array only store object doesn't support
+					object manipulations.
+					
+			=> All collection interface classes comes with
+				root methods to manipulate stored objects.
+				
+						Add()
+						Remove()
+						Contains()
+						IsEmpty()
+						Size()
+						iterator()
+						AddAll()
+						Clear()
+						-------------Etc
+						
+						
+		ADD:-->
+				Method add any single object to collections
+				at runtime.
+						
+		AddAll:-->
+				Method allows to add group objects to 
+				collections at runtime.
+				
+		Remove:-->
+				Method remove Any single object from 
+				collection using object name.
+				
+		Contains:-->
+				is a boolean method return true/false
+				based on object available at collection.						
+		
+		iterator:-->
+				Method helps to read next iterator value
+				at collection. 
+				
+		size:-->
+				Integer return method, It return object
+				size at collection.
+		
+		clear:--> 
+				Method Clear all object available at 
+				Collection.
+				
+		isEmpty:-->
+				Method verify collection empty status
+				and returen boolean value true/false.
+				
+		get:-->
+				[Method available only at List Interface ]	
+				
+				It get single object from collection
+				using index number.
+						
+		put:-->
+				[Method available only at Map Interface]
+				
+				It helps to add pair object to collection.
+						
+ Collection categories:-->
+ 
+ 			Set, List, Map -----etc
+ 			
+ 			Set:-->
+ 					Set is a unorder collection of objecs, where
+ 					as it doesn't allow duplicates.
+ 						
+ 					1. HashSet
+ 					2. TreeSet
+ 						
+ 		HashSet:-->	
+ 			Allows to read objects in Random order.
+ 									
+ 			Set<String> set=new HashSet<String>();	
+ 			set.add("Object1");
+ 			set.add("Object2");
+ 								
+ 		TreeSet:-->
+ 			Allows to read objects in alphabetical order.
+					
+			Set<String> set=new TreeSet<String>();	
+ 			set.add("Object1");
+ 		    set.add("Object2");
+					
+	=========================================================================
+	List:-->
+ 					List is a  inorder collection of objects and accept
+ 					duplicate values...
+ 						
+ 								1. Arraylist
+ 								2. LinkedList
+ 								3. Vector	
+ 								
+ 			1. Arraylist:-->
+ 					in Arraylist retrieving is faster than
+ 					linktext list.
+ 					
+ 					List<String> list=new ArrayList<String>();					
+ 							
+ 							
+ 			2. LinktextList:-->
+ 					in Linktextlist Insertion of data and removal to 
+ 					data in faster than Arraylist..	
+ 					
+ 					LinkedList is better for manipulating data.			
+ 							
+ 					List<String> list=new LinkedList<String>();					
+ =============================================================
+ Map:-->
+		Map is a interface class which store pair objects
+				as collection. We store pair object using keyname
+				and value.. 
+		 
+			=> Hashtable is sorter list of set..
+	 			[Hashtable also unorder collection of objects
+	 			and doesn't accept duplicates...]
+	 			
+	 			
+	 			HashMap:-->
+	 					HashMap is non synchronized.
+	 					HashMap allows one null key and multiple null values.
+	 					
+	 			HashTable:-->
+	 					HashMap is synchronized.
+	 					Hashtable doesn't allow any null key or value.	
+	 						
+====================================================================
+		 						
+ 								
+ 								
+ 									
