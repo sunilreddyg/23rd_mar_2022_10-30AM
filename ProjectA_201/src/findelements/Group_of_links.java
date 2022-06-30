@@ -16,32 +16,32 @@ public class Group_of_links {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\MINDQ\\Desktop\\recent_drivers\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("https://www.amazon.com/");
+		driver.get("https://www.instagram.com/");
 		driver.manage().window().maximize();
+	
+		WebElement FooterArea=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/section[1]/footer[1]/div[1]/div[1]"));
 		
-		//Identifying single element
-		WebElement Dropdown=driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+		//Find list of links under FooterArea
+		List<WebElement> AllLinks=FooterArea.findElements(By.tagName("a"));
+		System.out.println(AllLinks.size());
 		
-		//Select Book OPtions
-		new Select(Dropdown).selectByVisibleText("Books");
 		
-		WebElement Search_button=driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
-		new Actions(driver).click(Search_button).perform();
-		Thread.sleep(5000);
-		
-		WebElement PopularBooks=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/ul[1]"));
-		List<WebElement> Books=PopularBooks.findElements(By.tagName("a"));
-		
-		for (int i = 0; i < Books.size(); i++) 
+		//Iterate for number of links
+		for (int i=0; i <AllLinks.size(); i++) 
 		{
-			//Get Each book using index number
-			WebElement EachBook=Books.get(i);
-			System.out.println("Bookname:-->"+EachBook.getText());
-			System.out.println("Book Address:-->"+EachBook.getAttribute("href"));
+			
+			String LinkName=AllLinks.get(i).getText();
+			String Linkhref=AllLinks.get(i).getAttribute("href");
+			
+			driver.navigate().to(Linkhref);
+			Thread.sleep(4000);
+			System.out.println(LinkName+"     "+driver.getTitle());
+			
+			//Restore all Page References to avalid stale reference exception
+			driver.navigate().back();
+			FooterArea=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/section[1]/footer[1]/div[1]/div[1]"));
+			AllLinks=FooterArea.findElements(By.tagName("a"));
 		}
-		
-		
-		
 		
 		
 	}
