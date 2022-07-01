@@ -1,0 +1,26 @@
+WebTable:--->
+
+   <table id="profiles">
+   
+   		<thead>
+   			<tr>
+   				<th> Header1 </th>
+   				<th> Header2 </th>
+   			</tr>
+   			
+   		</thead>
+   		<tbody>
+   		
+   			<tr>
+   				<td> User1</td>
+   				<td> PWD1</td>
+   			</tr>
+   		</tbody>
+   </table>
+   =================================>
+   table ---> Tag create table design
+   tbody ---> create table body under table
+   thead --> Create header part at table
+   tr    --> create row at table
+   th    --> create header at table
+   td    --. create cell at table
