@@ -1,0 +1,44 @@
+Page Objects:--->
+
+ Within your web app's UI there are areas that your tests
+ interact with. A Page Object simply models these as 
+ objects within the test code. 
+ 
+  This reduces the amount of duplicated code 
+  it means that if the UI changes, the fix need only
+  be applied in one place.
+  
+  pagefactory:-->
+  
+  		pagefactory is a part of pageobject, It contains
+  		library class called pagefactory, which supports
+  		to convert simple objects into testcode..
+  		
+  		
+ Page Object Model types?:-->
+
+	=> Pageobjects without pagefactory
+	=> pageObjects with Pagefactory class.
+
+	Pageobject model is inbuilt framework of WebDriver, It work as 
+	object repository
+
+	Advantages of framework:-->
+		=> Avoid using duplication of objects
+		=> Reusability of objects
+		=> flexibility of objects
+		=> Optimize code 
+		=> Any new memeber can understand code
+
+	Difference between pageObjects and PageFactory:-->
+
+		PageObjects:-->
+				=> We have to import Whenever Object is reused outside package
+				=> We use By class to Identify object
+
+		PageFactory:-->
+
+				=> No need to import object referrences outside package
+				=> @CacheLookup function helps to reuse object without referring everytime
+				=> Object should declare with @FindBy /  @FindAll
+  		
