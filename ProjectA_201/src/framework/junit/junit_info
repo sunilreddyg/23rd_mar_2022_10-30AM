@@ -1,0 +1,146 @@
+
+-----------------Junit----------------------------
+	 => junit is a unit testing framework
+	 => java developers use junit to debug progamms.
+
+	Why we are using junit framework in selenium:--->
+
+	1. To optimize test case and Scripts
+	2. By default Selenium don't have reporting option, 
+				At least we can report tests using junit
+	3. To execute programms without using main method
+	4. After every run junit provide test result window.
+			[Testresult window contains run history pass/failed/skipped]
+	
+	To organize methods with in java class we follow bellow annotations
+
+	Junit-4 Annotations:-->
+	
+		@Test
+		@BeforeClass
+		@AfterClass
+		@Before
+		@After
+		@Ignore
+		
+	Juint-5 Annotations:--->
+	
+		@Test
+		@BeforeAll
+		@AfterAll
+		@BeforeEach
+		@AfterEach
+		@disabled
+----------------------------------------------------------------
+
+
+Note:--> Inorder to work with junit framework,Add 
+		 junit libraries to java project.
+
+Add junit libraries to project:-->
+		=> Junit is a default plugin it comes with eclipse.
+		=> Open buildpath and  select --> configure buildpath
+		=> Click "add library" button and select junit library then click next button.
+		=> Select junit version 4 and click next button
+	  	=> after completed adding jar files click
+		finish to close buildpath window...
+		
+Creating Junit Testcase:-->
+Navigation to create junit testcase:-->
+
+		right click on package----->New---> Junit Testcase
+		---Enter ClassName---> Click On finish
+		
+How to run JunitTestcase:-->
+		Right click on Junit class --> Select Run as JunitTest
+		
+Where to find Junit Result:-->
+		Junit prompt test result after  every run.
+		
+---------------------------------------------------------------------------------
+
+
+Annotations:---->
+
+	Annotations organize method execution with in class, all
+	annotations set for methods only..
+	
+
+
+@Test:-->
+
+	It invoke method execution without using object creation.
+
+	syntax:-->
+			@Test
+			public void methodname()
+			{
+
+			}
+
+------------------------------------------------------------------>
+
+@beforeClass:-->
+
+	Beforeclass annotated method execute , before first @Test annotated method
+	 with in class
+
+
+	syntax:-->
+		@BeforeClass
+		public static  void methodname() throws Exception
+		{
+			//We can design test preconditions.
+		}
+		
+		Note:--> Because method contain Static Access Specifier.We 
+				should declare all global variables with static specifier only.
+		
+------------------------------------------------------------------->>
+
+@AfterClass:--->
+
+	AfterClass annotated method execute, After last @Test annotated method
+	with in class
+
+		@AfterClass
+		public static  void methodname() throws Exception
+		{
+
+		}
+
+@Before:-->
+
+	Before annotated method is execute before each @Test method 
+	with in  a class
+
+	Note:--> When all test methods needed a same precondition
+
+		@Before
+		public void methodname() throws Exception
+		{
+		
+		}
+
+
+@After:-->
+
+	After annotated method execute after each @Test method with in a class
+
+	Note:--> When all test methods needed a same kind of post condition
+
+		@After
+		public void methodname() throws Exception
+		{
+
+		}
+
+
+@Ignore:-->
+
+	Ignore method execution
+		@Ignore
+		public void methodname()
+		{
+		
+		}
