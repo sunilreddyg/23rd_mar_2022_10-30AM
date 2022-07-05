@@ -1,0 +1,41 @@
+Extent Reports:-->
+
+	An open-source reporting library for Java, .Net and Ruby.
+	
+	Note:-->
+			Other Reporting libraries supported by selenium is
+				Log4j,Testng,junit,Allure --etc.
+				
+Why Extent Reports:-->
+			=> Because selenium don't have default reporting option.
+
+For information visit the Extent reports Site :-->
+		http://extentreports.com/docs/versions/2/java/
+		
+Download Extent Reports 2.4:-->
+	
+	URL:--> https://mvnrepository.com/artifact/com.relevantcodes/extentreports/2.41.2
+
+Download freemaker 2.3:--> [To get Opensource extent reports download freemaker ]
+	
+	URL:--> https://mvnrepository.com/artifact/org.freemarker/freemarker/2.3.23
+
+	Note:--> After download configure both files to selenium project.
+
+
+===========================================================================>>
+
+	//Create object for ExtentReports
+	ExtentReports extent = new ExtentReports(file-path, replaceExisting);
+
+	ExtentTest test = extent.startTest("Test Name", "Sample description");
+	test.log(LogStatus.PASS, "Step details");
+
+	// ending test
+	extent.endTest(test);
+
+	// writing everything to document
+	extent.flush();
+		
+		
+		
