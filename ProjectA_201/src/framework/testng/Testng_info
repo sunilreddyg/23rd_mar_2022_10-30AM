@@ -1,0 +1,451 @@
+-------------------testNg--------------------
+
+TestNG----> Test next generation
+
+	Testng is a opensource thirdparty framework. It derived
+	from junit and Nunit Framework.
+	
+	=> Testng support Test driven developement framework[TDD]
+	=> Report and running tool. [Running Testcase and Organizing testcase]
+	=> Inbuilt framework of [Datadriven and keyword driven]..
+	
+	
+TestNg Advantages:--->
+	
+	1. More annotations available, to oranize class and method execution.
+	2. Support parameterization using Dataprovider annotation
+	3. Excelent result generation compare to junit
+	4. Easy way to execute test case from suite files..
+	5. userdefined reports can be generate.
+	
+	
+	Note:--> Testng is not a default plugin for eclipse, 
+		need to download from Eclipse marketplaces.
+
+
+TestNg installation:--->
+
+	TestNG is a plugin for eclipse
+
+	1.Open Eclipse-----> HelpMenu--->Install New Software
+
+	2. And click on Type Button Then Enter Name as Testng
+	
+	3. value as   https://testng.org/testng-eclipse-update-site. Then click on add button
+	
+	4. Select Testng Checkbox and click on continue to install testng
+	
+	5. Click Accept License agreement
+
+	6. Click on Next
+
+	7. click button "InstallAnyway"
+	
+	8. Click  "Restart now" button to restart eclipse..
+
+	Note:--> After restart we can find testng plugin by rightclick on Src 
+		under your project...
+
+Add testng library files to project:--->
+		
+		Right click on project ----> Use buildpath --->select Configure buildpath
+		-->Click Add library button   --> select testng -->click next button
+		then click finish button to complete configuration..
+-----------------------------------------------------------------------------
+
+Creating Testng class:-->
+
+	Right click on package--->Testng--->Create TestngClass
+	Enter class name ignore all annotations click on finish..
+
+Run testng Class:-->
+	Right click on Testng class --> Select RunAs
+	---> Click TestngTest.
+	
+	Note:-->
+			In Real environment we should execute all testng
+			classes from XML suite[Testng SUITE] file.
+
+where to find test results:-->
+Note:--->
+	 Aftet Execution of Testng Class, 
+	 Refresh project once,
+	 it generate testoutput folder additionally under your project,
+	 Expand folder and watch result under 
+	 "emailablereport.html" or  "index.html"
+	 =>Both are html files we can open using web browser..
+
+Reporting syntax at Testng:-->
+
+	Reporter.log("Provide result");            
+			 --->only generate Result in  html file [emailable report]
+
+	Reporter.log("Provide result",true);       
+			---> result display at emailable report, 
+						Also under console.
+
+
+	Note:-->	Above reporting option only 
+				we should define for @Test annotations.
+							
+================================================================
+How to prioritize test methods with in testng class:--->
+
+
+public class testngclass
+{
+	@Test(priority=0)
+	public void testmethod1()
+	{
+		
+	}
+}
+
+Note:-->
+	Testng execute methods in alphabetical order, in order to execute methods
+	in your own order specified at testng class. we can set priority for method
+
+	* priority index start from zero
+
+---------------------------*******************_________________________________
+
+Example:--->How to provide description for testng method
+
+  @Test(description="write description")
+  public void test() 
+  {
+	  Reporter.log("method y is executed");
+  }
+  
+Note:-->
+	After Generating result , In test output folder,Under 
+	Index---->click Show All pass methods--->Along with Methodname
+	description will be display.
+
+	Also display method description with in Console
+	=> Description is not mandatory
+------------------------------------------------------------------------------------>
+
+How to Ignore method execution with in testng class
+
+  @Test(enabled=false)
+  public void m1() 
+  {
+	  Reporter.log("method y is executed");
+  }	
+
+
+Note:-->
+	=> find result at index ignored methods
+	=> By using << exclude  >>  tag we can ignore method from suite file
+---------------------------------------------------------------------------------------------------------------------------------
+
+how to provide execution dependency for single method:--->
+
+@Test(dependsonMethods={"dependent methodname"})
+
+
+how to provide execution dependency for multiple methods with in testng class:--->
+
+
+@Test(dependsonMethods={"dependent_m1","dependent_m2"})
+
+	Note:---> If dependent methdod fail , Testng skip method execution Instead of
+		making test result as fail..
+
+-------------------------------------------------------------------------
+How to insert assert statement in testng class...
+
+Assert:-->
+	Assert is a valdation statement, it abort the run on failure, in testng
+	it abort the @Test method execution on failure..
+
+	Asserttrue:--. Boolean comparsion
+	AssertEquals:--> Any String or other datatype comparision
+
+	Assert.assertEquals("Act", "Exp");
+	Reporter.log("Match Found");
+	  
+	Assert.assertTrue(true);
+	Repoter.log("Expected result found")
+	  
+	Assert Statement send report to EmailableReports on Failure,
+	On success manually we need to define using Reporter.log option.
+				
+---------TestNG suite file architecture---------------------
+
+<suite name="suitename">
+	<test name="test1">
+		<classes>
+		      <class name="packagename.classname">
+			      <methods>
+						<include name="methodname > </include>											<include name="methodname"></include>
+						<exclude name="method name> </exclude>
+			       </methods>
+	          </class>
+		</classes>
+	</test>
+</suite>
+
+------------------------------------------------------------************-------------------------------------------------------
+
+@BeforeSuite: The annotated method will be run before all tests in this 
+suite have run.
+
+@AfterSuite: The annotated method will be run after all tests in this suite have run.
+
+@BeforeTest: The annotated method will be run before any test method belonging 
+to the classes inside the <test> tag is run.
+
+@AfterTest: The annotated method will be run after all the test methods 
+belonging to the classes inside the <test> tag have run.
+
+@BeforeClass: The annotated method will be run before the first test method
+ in the current class is invoked.
+
+@AfterClass: The annotated method will be run after all the test methods in
+ the current class have been run.
+
+@BeforeMethod: The annotated method will be run before each test method.
+
+@AfterMethod: The annotated method will be run after each test method. 
+
+
+------------------------------------------------------------------------------------------------>
+Running Testng classes from suite file:--->
+
+Creation of XML file:--->
+
+	Right click on project--->New---->Click Others
+	Select XML File---> EnterFilename with extension click on finish
+
+	Select source tab in XML file
+
+  => copy or type suite file along with class name and packagename..
+
+<suite name="sutie1">
+		<test name="test1" verbose="2">
+				<classes>
+						<class name="packagename.classname"></class>
+				</classes>
+		</test>
+</suite>
+
+
+Run Suite File:--->
+		Right click on suite file---->Run as ---->  TestNg Suite 
+
+
+================How to Assign groups to TestNg  test=========
+
+@Test(groups="groupname")             ==> Test assigning to single groups
+
+
+@Test(groups={"group1","group2"})     ==> Test assigning to multiple groups
+
+================Test Suite to run Groups --->
+
+
+	<groups>
+		<run>
+			<include name="G2"></include>
+		</run>
+	</groups>
+
+
+-----------How to Pass parameter from XML file-------------->>
+
+<suite name="sutie1" >
+       <test name="test1">
+				<classes>
+					<class name="packagename.classname">
+					
+							<parameter name="url" value="http://hotmail.com"></parameter>
+							<parameter name="uid" value="sunilreddy"></parameter>
+							<parameter name="pwd" value="hello123"></parameter>
+					</class>
+				</classes>
+       </test>
+</suite>
+
+Note:--->	
+	name="url"       :--->name of parameter
+	value="http://hotmail.com" :---> parameter value    
+	both are userdefined
+
+---------How To Retrieve parameter from XML---------
+
+@Test
+@parameters("parameter_name_from_xml")
+public void Testmethod(String userdefinedparameter)
+{
+
+	s.o.p(userdefinedparameter);
+}
+-------how to retrieve multiple parameter from suite file
+
+@Test
+@parameters({"par1","par2"})
+public void Testmethod(String par1, String par2)
+{
+	s.o.p(par1);
+	s.o.p(par2);
+	
+}
+
+Note:--->  We can find Parameter information at emailable report.
+			Tesng genarate input values at testoutput folder..
+					
+=============================================================>
+--->How to Execute Two are multiple tests with in suite.. 
+	
+<suite name="suite1">
+		<test name="test1">
+			//Declare what classes to execute
+		</test>
+	
+		<test name="test2">
+			//Declare what classes to execute
+		</test>
+</suite>
+
+
+-------How to execute multiple tests parallel--------->
+
+<suite name="sample"  parallel="tests">
+
+	//Define multiple tests  to execute
+</suite>
+
+
+	<suite name="My suite" parallel="methods" >
+	<suite name="My suite" parallel="tests" >
+	<suite name="My suite" parallel="classes" >
+	<suite name="My suite" parallel="instances" >
+
+
+
+    parallel="methods": TestNG will run all your test methods in separate threads. 
+		Dependent methods will also run in separate threads but they 
+		will respect the order that you specified.
+
+    parallel="tests": TestNG will run all the methods in the same <test> tag in the same thread,
+		 but each <test> tag will be in a separate thread. This allows you to 
+		group all your classes that are not thread safe in the same <test> 
+		and guarantee they will all run in the same thread while taking 
+		advantage of TestNG using as many threads as possible to run your
+		 tests.
+
+    parallel="classes": TestNG will run all the methods in the same class in the same thread, 
+			but each class will be run in a separate thread.
+
+    parallel="instances": TestNG will run all the methods in the same instance in the same
+			 thread, but two methods on two different instances will be 
+			running in different threads.
+
+----------------Dataprovider------------------------>
+
+	Dataprovider is a annotation in testNG framework, It
+	organize input Data to Execute test methods..
+
+	Adv:--->
+		* Without Defining Loops we can Execute test with multiple set
+				of data.
+		* Instead of following Excel kind of datadriven framework,
+			We can organize multiple set of data to testcases.
+		* Dataprovider genarate input data in emailable report.
+		* Annotation allows to create testdata easy way,
+		  without writing programming.
+		  
+Creating Dataprovider class:--->
+		Right click on package---->Create testng Class--->
+		Enter Classname--->Select Dataprovider annoation
+		click on finish
+
+---------How to maintain data under dataprovider method--------->
+
+@DataProvider
+  public String[][] dp() 
+  {
+	  String data[][]=new String[2][2];
+	  //First Row data
+	  data[0][0]="qadarshan@gmail.com";
+	  data[0][1]="newpassword"; 
+
+	  data[1][0]="newuser@gmail.com"; 
+	  data[1][1]="userpwd123"; 
+
+	  return data;
+  }
+  
+	Note:--> @Dataprovider annotation we define where we maintain 
+	testdata to parameterize
+	
+----------How to retrieve Data from Dataprovider method
+  @Test(dataProvider = "methodname")
+  public void f(String uid,String pwd) 
+  {
+	  
+	    //Method paramters need to declare depends on Dataprovider Method.
+	
+  }
+------------------------------------------------------------------------------------------>
+How to retrievedata from different class..
+
+@Test(dataProvider="methodname", dataProviderClass = classname.class)
+public void (String var,String var)
+{
+	//Data provider method should declare with static access specifier..
+}
+
+===============================================================>
+Test Listeners:-->
+
+	There are several interfaces that allow you to modify TestNG's behavior. 
+	These interfaces are broadly called "TestNG Listeners". 
+	Here are a few listeners: 
+
+
+    	IAnnotationTransformer
+    	IAnnotationTransformer2 
+    	IHookable 
+    	IInvokedMethodListener 
+    	IMethodInterceptor 
+    	ISuiteListener 
+    	IReporter 
+    	ITestListener     --->Testers use test listeners...
+
+	--------Events to listen under ItestListeners------
+
+onFinish(ITestContext context)
+	Invoked after all the tests have run and all their Configuration 
+	methods have been called.
+
+
+onStart(ITestContext context)
+	Invoked after the test class is instantiated and before any 
+	configuration method is called.
+
+onTestFailedButWithinSuccessPercentage(ITestResult result)
+	Invoked each time a method fails but has been annotated 
+	with successPercentage and this failure still keeps 
+	it within the success percentage requested.
+
+
+onTestFailure(ITestResult result)
+	Invoked each time a test fails.
+
+onTestSkipped(ITestResult result)
+	Invoked each time a test is skipped.
+
+onTestStart(ITestResult result)
+	Invoked each time before a test will be invoked.
+
+onTestSuccess(ITestResult result)
+Invoked each time a test succeeds.
+
+
+
+
+
+
