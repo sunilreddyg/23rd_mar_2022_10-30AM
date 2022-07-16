@@ -11,10 +11,7 @@ import pageobjects.Pages.OrangeHRM_Menu_List;
 public class Run_With_Keywords extends CommonReusable_Actions
 {
 	
-	
-	
 	OrangeHRM_HomePage home;
-
 	
 	@BeforeClass
 	public void beforeclass()
@@ -24,8 +21,7 @@ public class Run_With_Keywords extends CommonReusable_Actions
 		set_explicitwait_time(30);
 	}
 	
-	
-	@Test
+	@Test(enabled=false)
 	public void userlogin_valid_data()
 	{
 		home=new OrangeHRM_HomePage(driver);
@@ -35,6 +31,14 @@ public class Run_With_Keywords extends CommonReusable_Actions
 		OrangeHRM_Menu_List menulist=new OrangeHRM_Menu_List(driver);
 		Assert.assertTrue(menulist.admin.isDisplayed());
 		Reporter.log("Login is successfull");
+	}
+	
+	@Test
+	public void InstagramLogin()
+	{
+		load_webpage("http://instagram.com");
+		Type_text("//input[@name='username']", "9030248855");
+		waitfor_object_behaviour("visible", home.username, null);
 	}
 	
 }

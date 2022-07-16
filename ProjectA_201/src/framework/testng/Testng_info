@@ -231,6 +231,21 @@ Creation of XML file:--->
 		</test>
 </suite>
 
+How to run method from suite file and how to exclude methods..
+
+<suite name="sutie1">
+		<test name="test1" verbose="2">
+				<classes>
+						<class name="packagename.classname">
+								<method>
+									<include name="methodname"/>
+									<exclude name="methodname"/>
+								</methods>
+						</class>
+				</classes>
+		</test>
+</suite>
+
 
 Run Suite File:--->
 		Right click on suite file---->Run as ---->  TestNg Suite 

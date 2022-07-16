@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Deafult Suite1">
+	<test name="DeafultTest" verbose="2">
+		<classes>
+			<class name="framework.testng.TestSuite.Class1"/>
+			<class name="framework.testng.TestSuite.Class3"/>
+			<class name="framework.testng.TestSuite.Class2"/>
+			<class name="framework.testng.MyTestngTest"/>
+		</classes>
+	</test>
+</suite>

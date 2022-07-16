@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Crossbrowser">
+	<test name="chrome">
+			<classes>
+					<class name="framework.testng.BeforeTest_and_AfterTest.TestSuite1"></class>
+					<class name="framework.testng.BeforeTest_and_AfterTest.TestSuite2"></class>
+					<class name="framework.testng.BeforeTest_and_AfterTest.Test_for_Chrome"></class>
+			</classes>
+	</test>
+	
+</suite>
