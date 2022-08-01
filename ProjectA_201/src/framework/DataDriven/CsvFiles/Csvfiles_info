@@ -1,0 +1,33 @@
+ CSV files:-->
+ 
+  A CSV file stores tabular data (numbers and text) 
+  in plain text. 
+ 
+ In computing, a comma-separated values (CSV)
+ file is a delimited text file that uses a comma 
+ to separate values. 
+ 
+
+ Each line of the file is a data record. 
+ Each record consists of one or more fields, 
+ separated by commas. 
+ 
+ Advantages of CSV files:-->
+ 		=> We can read Database records to csv file with in plain text format
+ 		=> We can use flat file in any operating system.
+ 
+ =====================================================>>
+ How to create CSV file:-->
+ 
+ 	=> Prepare testdata in notepad file by separting
+ 			with comma delimeter.
+ 	=> and save with .csv extension.
+ 
+ ====================================================>>
+ Inorder to write and execute csv programms download Opencsv.jarfile
+ and configure to  java selenium_project.
+ 
+ 	URL:--> https://mvnrepository.com/artifact/com.opencsv/opencsv/3.3
+ 				 Download jar file
+ 				 Inorder to work with csv file add jar files to project..
+ ====================================================>>

@@ -1,0 +1,42 @@
+Property Files:-->
+	Property files also called as repository files.
+	In java programming property files store information
+	using keyname and value.
+	
+				key=value
+				
+	Note:--> Property files are sub version of hashtables.
+	It store pair values using "key" and "value" format.
+	
+			=> property files only store single user data.
+			=> In other programing language property files
+					also known as dictionary objects...
+					===================================
+			
+create property file:-->
+	
+			=> Create file with .properties extension
+			=> Store data using key and value format.
+				
+					Email=mqdsnr@gmail.com
+					Mobile=9030248855
+==========================================>>
+Why Property files in Selenium:-->
+		=> Most of the time deverloper create
+			testdata under property files [Configurations, Login credentials,
+			 paths] and same data transfer to testing team. 
+			 Inorder to automate.
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+				
