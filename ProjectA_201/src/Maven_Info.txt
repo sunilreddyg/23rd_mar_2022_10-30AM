@@ -1,0 +1,154 @@
+Maven:-->
+	Maven is a management tool it build projects using 
+	project object model [POM]...!
+
+1. Make sure java is installed
+
+	cmd:--> java -version
+
+navigation to open properties window:--->
+
+	start menu---> right click on computer---> properties---> 
+	Adavnced system settings---> Click Environment Variable.
+
+==============================================================
+
+2.Set Environment Variable With JAVA_HOME , and specify value as java location
+
+	
+	JAVA_HOME   C:\Program Files\Java\jdk1.8.0_20	
+
+==============================================================
+
+3.Download maven
+
+	https://maven.apache.org/download.cgi
+
+	Download latest zip format file  from [binaries]
+
+	Create folder in any drive and name it as maven
+	
+	unzip file to maven folder.
+
+==============================================================
+4.Set Environment path for Maven with MAVEN_HOME
+
+
+	MAVEN_HOME  C:\maven\apache-maven-3.3.1
+==============================================================
+5.Append maven path to system path variable   [Window 7]
+	
+
+		;C:\maven\apache-maven-3.3.1\bin
+    System path	;%MAVEN_HOME%\bin
+
+================================================================
+Verify Maven configuration:-->
+
+	cmd:-->  mvn - -version       [It should display java and maven version details]
+=================================================================
+maven project creation at eclipse:-->
+
+	nav:--> File --> New --> Others --> Open maven folder 
+	      --> Select maven project and click on next button.
+
+=> Select checkbox Create Simple project and  click on next button.
+=> Enter groud id [packagename]
+=> Enter artifact name  [current project name you wish to enter]
+=> Select packaging  as jar file
+=> click on finish.
+
+====================================================================
+=>open POM.xml file and all depedencies 
+
+	 <dependencies>
+  						
+  		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			 <version>7.6.1</version>
+			<scope>test</scope>
+		</dependency>
+				
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+				
+  			
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.3.0</version>
+		</dependency>	
+  	
+  	</dependencies>
+
+
+	Note:--> after adding depedencies save pom.xml file
+
+==========================================================
+=> Add TestSuite runner  
+=> https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+=> Add plugin to pom.xml file under project..
+
+	<!-- Plugin execute testng suite file -->
+    	<build>
+  	       <plugins>
+	         	<plugin>
+		           <groupId>org.apache.maven.plugins</groupId>
+		           <artifactId>maven-surefire-plugin</artifactId>
+		           <version>3.0.0-M3</version>
+		           <configuration>
+		             <suiteXmlFiles>
+		               <suiteXmlFile>testng.xml</suiteXmlFile>
+		             </suiteXmlFiles>
+		           </configuration>
+	         	</plugin>
+	     </plugins>
+  	</build>
+
+=====================================================================
+
+--> Open Command prompt
+
+	cmd:-->    mvn install
+
+		it create snapshot of your project and packaged all environment to
+		jar file, Information you found at target folder
+	
+	cmd--mvn eclipse:eclipse 
+		
+		above command update any scripts and modification in eclipse
+
+	cmd--mvn validate
+
+		above command Create snap shot in your folder,
+			Verify maven packaged project or not
+	cmd--mvn compile
+		
+		above command list ouput number of resources to compile
+
+	cmd--mvn package
+
+		Execute all tests available
+
+	cmd mvn test
+
+		it execute resources available under maven project
+
+=================================================================
+Execute Single Class:-->
+
+		mvn test -Dtest=classname
+
+Execute Single Method:-->
+		mvn test -Dtest=classname#methodname
+
+Execute Single Method:-->
+		mvn test -Dtest=classname#methodname+methodname
+
+=================================================================>>
