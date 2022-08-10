@@ -14,7 +14,6 @@ public class Hexagon extends Shape
 	
 	
 	
-
 	public static void main(String[] args) {
 		
 		Shape shp=new Hexagon();
