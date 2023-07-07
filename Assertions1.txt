@@ -1,0 +1,161 @@
+Assertions:-->
+	=> Assertions are usefull to verify acutal behaviour at
+		web browser window.
+	=> Assertions are work like a checkpoints at webpage
+		
+<<<<<<<<<AKKHIL SAMPLE?>>>>>>>>>>>>
+	How to apply assertions in Selenium IDE:-->
+
+		=> Open Selenium IDE
+		=> Turn Recording Mode on
+		=> Right click on page or object 
+		=> Select Assert option at context menu
+		=> Select Assertion type [Assert/Verify --etc]
+		=> Then Select a Assertion command
+		=> With this action assertion command successfully
+			update to IDE Recording window..
+
+
+		Assertion Types:-->
+
+			Assert
+			Verify
+			
+		Assert:--> [Also known as Hard assertions]
+			 Stop run on failure and report at result window
+
+		verify:--> [Also known as soft assertions]
+			    Cotinue failure even expected
+			    feature not found but genarate report at log
+
+
+Assert and verify commands:-->
+
+	title:-->  Confirm the title of the current 
+		page contains the provided text
+
+
+	text:-->> Confirm that the text of an element contains 
+		 the provided value
+
+	value:--> Confirm the (whitespace-trimmed) value of an input 
+		  field (or anything else with a value parameter). 
+		  For checkbox/radio elements, the value will be "on" 
+		  or "off" depending on whether the element is checked 
+		  or not.
+
+
+	 Presented :-->
+		Confirm that the target element is present 
+		somewhere on the page
+
+
+	Not presented:-->
+		Confirm that the target element is not present 
+		anywhere on the page
+			
+
+	Checked:-->
+		Confirm that the target element has been checked.
+
+	Not Checked:-->
+		Confim that the target elements has not been checked
+
+
+	Editable:-->
+		Confirm that the target element is in editable mode
+		
+
+	Not Editable:-->	
+		Confirm that the target element is in readonly mode
+
+
+	Select label:-->
+		Confirm that required dropdown is populating 
+		selected option
+
+
+Wait Commands:-->
+
+	wait for visible:-->
+		Wait for a target element to be visible on the page.
+
+
+		wait for visible      id="email"        30000
+
+
+	Wait for not visible:-->
+		wait for a target element to be hidden on the page.
+
+
+		wait for not visible      id="email"        30000
+
+	wait for text:-->
+		wait for a target element contains expected text
+
+		wait for text 		id="text"         ExpectedText
+
+	wait for editable:-->	
+		wait for editbox to be editable
+
+		wait for editable	id="email"       40000
+
+	wait for not editable:-->
+
+		wait for editbox to be readonly mode
+		
+		wait for not editable    id="email"      50000
+
+	wait for element presence:-->
+			
+		wait for expected target presented at htmlsource
+
+		wait for presence   id="name"        40000
+
+	wait for element not presence:-->
+		
+		Wait for a target element to not be present on the page.
+
+		wait for elemnet not presence   id="name"        40000
+
+
+Store Commands:-->
+
+		Store commands are usefull to store String memory
+		to any referenced name so that memory can be
+		re use when ever it requited
+
+		
+		store title	 Facebook Page	    FB_Title
+		echo		${FB_title}
+
+======================================================================
+Creating test suite in Selenium IDE:-->
+
+		Test suites are usefull to store group of related tests
+
+	
+		=> Open Selenium IDE
+		=> From Tests menu list select Testsuites
+		=> Click on + Button
+		=> Enter Suite name at Popup window
+		=> Right click on suite Menu 
+		=> Click Add test button
+		=> Then Selected Required Test
+		=> Click on Add to suite
+
+
+	How to Run Test Suites:-->
+		=> Open Testsuites menu
+		=> Select one on any tests under suite
+		=> Click on PlayallTests in suites 
+		
+
+	
+
+
+
+
+
+
+		
