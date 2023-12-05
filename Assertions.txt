@@ -3,7 +3,7 @@ Assertions:-->
 		web browser window.
 	=> Assertions are work like a checkpoints at webpage
 		
-
+<<<<<<<<<AKKHIL SAMPLE?>>>>>>>>>>>>
 	How to apply assertions in Selenium IDE:-->
 
 		=> Open Selenium IDE
